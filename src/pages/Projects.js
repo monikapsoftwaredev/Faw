@@ -1,10 +1,15 @@
 import React from 'react';
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 
-const Projects = () => {
+const About = () => {
     return ( 
-        <div> Projects</div>
+        
+        <Box sx={{bgcolor: "pink", height: "100vh"}}> About</Box>
+       
+       
      );
 }
  
-export default Projects ;
+export default About ;

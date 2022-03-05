@@ -3,13 +3,13 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 
-const Wordrobe = () => {
+const About = () => {
     return ( 
         <Container maxWidth='false' >
-        <Box sx={{bgcolor: "yellow", height: "100vh"}}> Wordrobe</Box>
+        <Box sx={{bgcolor: "green", height: "100vh"}}> About</Box>
         </Container>
        
      );
 }
  
-export default Wordrobe ;
+export default About ;

@@ -1,10 +1,9 @@
-import React from 'react';
-
+import * as React from 'react';
 
 const Kitchen = () => {
-    return ( 
-        <div> Kitchen</div>
-     );
+    return (
+        <h1  style={{marginTop:'200px'}}>KItchen</h1>
+      );
 }
  
-export default Kitchen ;
+export default Kitchen;
