@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container'
 import MenuItem from '@mui/material/MenuItem';
 import {navbarPages} from './navbarPages';
-import { height } from '@mui/system';
+
 
 
 
@@ -38,6 +38,9 @@ const Navbar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  //, mt:'150px'
+  //  #eae1dc
 
   const Styles = {
       appbar:{
