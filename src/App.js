@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Error from './pages/.Error';
 import Container from "@mui/material/Container";
+import Bathroom from './pages/Bathroom';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="kitchen" element={<Kitchen />} />
           <Route path="wordrobe" element={<Wordrobe />} />
+          <Route path="bathroom" element={<Bathroom />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<Error />} />

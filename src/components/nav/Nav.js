@@ -44,13 +44,14 @@ const Navbar = () => {
 
   const Styles = {
       appbar:{
-        backgroundColor:"#eae1dc" , 
+        backgroundColor:"#dbcfc9" , 
         position:'fixed',
        
       } , 
       logo:{
         mr: 15,
-        fontSize: '23px',
+        fontSize: '26px',
+        fontWeight:'420', 
         color: '#2f2d29' , 
             display: {
                 xs: 'none',
@@ -80,8 +81,8 @@ const Navbar = () => {
     <AppBar sx={Styles.appbar} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Box sx={{color:'blue'}}>
-         <Button sx={{color:'red'}} >
+        <Box>
+         <Button >
             <Typography
                 variant="h6"
                 noWrap
@@ -127,7 +128,7 @@ const Navbar = () => {
             
               {navbarPages.map((page) => (
                 <MenuItem key={page.id} onClick={handleCloseNavMenu} sx={Styles.menu}>
-                  <Typography textAlign="center" onClick={()=> navigate(page.route.en)}>{page.title.en}</Typography>
+                  <Typography textAlign="center" sx={{fontWeight:'300'}} onClick={()=> navigate(page.route.en)}>{page.title.en}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -157,7 +158,7 @@ const Navbar = () => {
                 noWrap
                 component="div"
                 onClick={()=> navigate(page.route.en)}
-                sx={{ fontSize: '15px' , textTransform:'capitalize' }}
+                sx={{ fontSize: '15px' , textTransform:'capitalize' , fontWeight:'350' }}
               >
                  {page.title.en} 
               </Typography>

@@ -13,3 +13,29 @@ const About = () => {
 }
  
 export default About ;
+
+
+
+
+            /* <CardActions>
+                    <Button 
+                    variant='text'
+                    size="large"
+                    onClick= { () => navigate("/")}
+                    sx={{ mx:'auto' , my:'10'  , color:'#2f2d29'}}
+                    
+                    >
+                    < Typography 
+                    varient='h6'
+                    sx={{
+                    textTransform:'capitalize' , 
+                    mx:'2', 
+                    my:'2',
+                    px:'30px' , 
+                    
+                    }}>
+                    Kitchen
+                    </Typography>
+                    </Button>
+                </CardActions>
+                 */
