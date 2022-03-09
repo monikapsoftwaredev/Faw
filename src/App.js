@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/nav/Nav';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Kitchen from './pages/Kitchen';
 import Wordrobe from './pages/Wordrobe';
@@ -13,10 +14,14 @@ import Bathroom from './pages/Bathroom';
 
 
 
+
 function App() {
   return (
     <div>
-      <Navbar/>
+      <div>
+        <Navbar/>
+      </div>
+      <div >
       <Container maxWidth='false' sx={{bgcolor: "#FFFFFF", height: "100vh"}} >
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,7 +33,10 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Container>
-
+      </div>
+     
+      
+     
     </div>
   );
 }

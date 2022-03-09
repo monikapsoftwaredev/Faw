@@ -3,7 +3,7 @@ import React from 'react';
 
 const Contact = () => {
     return ( 
-        <div style={{marginTop:'200px'}} > Contacts</div>
+        <div style={{marginTop:'200px'}} > Footer</div>
      );
 }
  
