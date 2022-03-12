@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 const Bathroom = () => {
     return ( 
         
-        <Box sx={{bgcolor: "pink", height: "100vh"}}> Bathroom</Box>
+        <Box sx={{ height: "100vh"}}> Bathroom</Box>
        
        
      );

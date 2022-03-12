@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/material";
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -11,9 +12,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
 
-import { useNavigate } from 'react-router-dom'
 
-  //eae5e3  dbcfc9 #ebe2dd
+  //eae5e3  dbcfc9 #ebe2dd////maxWidth='xl' sx={{ maxHeight:'100vh'  ,  mt:'66px' }}
 
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
 
 
     return ( 
-        <Container maxWidth='xl' sx={{ maxHeight:'100vh'  ,  mt:'66px' }} >
+        <Container maxWidth='xl' sx={{ maxHeight:'auto'  ,  mt:'66px' }} >
 
         {/* Header section */ }
 
@@ -32,7 +32,7 @@ const Home = () => {
                     component='img' 
                     sx={{maxHeight:'488px' , maxWidth:'800px' , paddingRight:'20px'   }} 
                     alt="kitchen"
-                    src="../assets/kitchen3.jpg"  
+                    src="../assets/mainContentPhotos/kitchen3.jpg"  
                     />
                 
 
@@ -53,11 +53,11 @@ const Home = () => {
 
         {/*  Services presentation section  */ }
 
-        <Box   sx={{ maxHeight:'auto' , width:'auto'  , bgcolor:'#f7f4f2' , display:'flex' , alignItems:'center' , justifyContent:'space-around' , py:'50px' }}>
+        <Box   sx={{ maxHeight:'auto' , width:'auto'  , bgcolor:'#f7f4f2' , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'50px' }}>
             <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
 
                 <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative' }}>
-                    <CardMedia component="img" height="300px" image="../assets/kitchen1.jpg"/ >
+                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
                 
                     <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
                         <Button variant="contained" sx={{bgcolor:'#dbcfc9', opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=> navigate('kitchen')} >
@@ -75,7 +75,7 @@ const Home = () => {
             <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
 
                 <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative'}}>
-                    <CardMedia component="img" height="300px" image="../assets/wordrobe.jpg"/ >
+                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wordrobe.jpg"/ >
 
                     <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
                         <Button variant="contained" sx={{bgcolor:'#dbcfc9',  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('wordrobe')} >
@@ -93,7 +93,7 @@ const Home = () => {
             <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
 
                 <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative'}}>
-                    <CardMedia component="img" height="300px" image="../assets/bath.jpg"/ >
+                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/bath.jpg"/ >
 
                     <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
                         <Button variant="contained" sx={{bgcolor:'#dbcfc9' ,  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('bathroom')}>
@@ -120,15 +120,15 @@ const Home = () => {
                   We will draw Your Dream Kitchen
                 </Typography>
             </Box>
-            <Box sx={{display:'flex' , alignItems:'center' , justifyContent:'space-around' , py:'30px'}}>
+            <Box sx={{display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'30px'}}>
                 <Box sx={{  px:'50px' , py:'30px' , maxWidth:'300px' , display:'flex' , flexDirection:'column' , alignItems:'center', justifyItems:'center' ,  position:'relative' }}>
                     <Box>
                             <Box component='img' 
                             sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
                             alt="design"
-                            src="../assets/design6.jpg" />
+                            src="../assets/mainContentPhotos/design6.jpg" />
                     </Box>
-                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7', px:'20px',  position:'absolute' ,  bottom:'16%', zIndex:'100'   }}>
+                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7', px:'20px',  position:'absolute' ,  bottom:'16%', zIndex:'10'   }}>
                         <Typography component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29'  , py:'5px', mx:'auto' ,fontSize:' 1rem' ,  lineHeight:' 1.5' }}>
                             Design Kitchen
                         </Typography>
@@ -139,9 +139,9 @@ const Home = () => {
                         <Box component='img' 
                                sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
                                 alt="hand"
-                                src="../assets/hand.jpg" />
+                                src="../assets/mainContentPhotos/hand.jpg" />
                     </Box>
-                    <Box sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7' ,px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'100'  }}>
+                    <Box sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7' ,px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'10'  }}>
                         <Typography  component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29' , py:'5px', mx:'auto'  ,fontSize:' 1rem' ,  lineHeight:' 1.5' }}>
                             Signing Contract
                         </Typography>
@@ -152,9 +152,9 @@ const Home = () => {
                         <Box component='img'
                                sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
                                 alt="kitchen"
-                                src="../assets/assemb6.jpg" />
+                                src="../assets/mainContentPhotos/assemb6.jpg" />
                     </Box>
-                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9', opacity:' 0.7' , px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'100' , }}>
+                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9', opacity:' 0.7' , px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'10' , }}>
                         <Typography component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29' , py:'5px', mx:'auto'  ,fontSize:' 1rem' ,  lineHeight:' 1.5'}}>
                             Your Kitchen
                         </Typography> 
@@ -169,7 +169,7 @@ const Home = () => {
             <Box sx={{ maxHeight:'900px' , width:'400px'   }}>
 
                 <Card sx={{ maxWidth:'510px',  bgcolor:"#eae1dc" ,  mx:'auto' ,borderRadius:'0' }}>
-                    <CardMedia component="img" height="510px" image="../assets/advice.jpg"/ >
+                    <CardMedia component="img" height="510px" image="../assets/mainContentPhotos/advice.jpg"/ >
                 
                 </Card>
 
@@ -188,7 +188,7 @@ const Home = () => {
                 </Box>
                 <Box sx={{bgcolor:'dbcfc9' ,  width:'100%' , height:'auto' , display:'flex' , justifyContent:'flexStart' }}>
                         <Button variant="contained" sx={{bgcolor:'#dbcfc9', opacity:' 0.8' ,px:'50px' , borderRadius:'0'}} onClick={()=> console.log('clicked')} >
-                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' ,fontSize:' 1rem' ,  lineHeight:' 1.5'}} > 
+                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' ,fontSize:' 1rem' ,  lineHeight:' 1.5'  ,  width:'160', mx:'auto'}} > 
                             More
                         </Typography>
                         </Button>
@@ -198,7 +198,7 @@ const Home = () => {
         </Box>
          {/* Contact section* #ebe2dd #e2d8d3 */ }
          
-        <Box sx={{ maxHeight:'900px', width:'100%' , py:'10px' ,   bgcolor:"#ebe2dd"  , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' }}>
+        <Box sx={{ maxHeight:'900px', width:'100%' , py:'10px' , bgcolor:'#ebe2dd'   , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' }}>
 
                 {/* Contact section nr 1 */ }
                 <Box sx={{height:'410px' , width:'360px', my:'30px' ,  bgcolor:'#ebe2dd'  , px:'10px' ,  pt:'20px', }}>
@@ -264,7 +264,7 @@ const Home = () => {
                 </Box> 
             
                 {/* Contact section nr 3 */ }
-                <Box sx={{height:'410px' , width:'360px',my:'30px'  ,  bgcolor:'#ebe2dd'  , px:'10px'  , pt:'20px'}}>
+                <Box sx={{height:'410px' , width:'360px',my:'30px'  ,   bgcolor:'#ebe2dd'  , px:'10px'  , pt:'20px'}}>
                     <Box  sx={{display:'flex' ,flexDirection:'column'  , alignItems:'center' , justifyContent:'center' , mb:'20px' }}>
                       
                         <MailOutlineIcon  sx={{fontSize:'65px' , fontWeight:'200' ,  color:'#787774'}} />
@@ -291,8 +291,8 @@ const Home = () => {
 
                 </Box>      
             </Box>
-              {/* Media section nr 3 dbcfc9 EBE2DD  */ }
-            <Box   sx={{ maxHeight:'400px', width:'100%'  ,   bgcolor:"#dbcfc9"   }}>
+              {/* Media section nr 3 dbcfc9 EBE2DD 
+               <Box   sx={{ maxHeight:'400px', width:'100%'  ,   bgcolor:"#dbcfc9"   }}>
                     <Box   sx={{ height:'auto', width:'100%' , pt:'60px' , display:'flex' , alignItems:'center' , justifyContent:'center'  }}>  
                             <Box>
                                 <Button variant="text" sx={{ px:'30px' , borderRadius:'0'}} onClick={()=> console.log(' Facebook')}  >
@@ -305,7 +305,7 @@ const Home = () => {
                                 </Button>
                             </Box>
                             <Box>
-                                <Button variant="text" sx={{ px:'30px' , borderRadius:'0'}} onClick={()=> console.log(' Youtube')}>
+                                <Button variant="text" sx={{ px:'30px' , borderRadius:'0' , border:'3px solid green'}} onClick={()=> console.log(' Youtube')}>
                                     <YouTubeIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
                                 </Button>
                             </Box>
@@ -328,7 +328,7 @@ const Home = () => {
                                     <Box>
                                         <Button variant="text" sx={{bgcolor:'transparent' , px:'10px' , borderRadius:'0'}} onClick={()=> console.log(' M&P Design')} >
                                             <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'400' ,   color:'#787774' ,fontSize:' 1rem' ,  lineHeight:' 1.5'}} > 
-                                            M&P Design
+                                            M&P Webdesign & Development
                                             </Typography>
                                         </Button>      
                                     </Box>
@@ -336,7 +336,7 @@ const Home = () => {
                                 </Box>         
                     </Box>  
 
-            </Box>
+            </Box> */ }
      </Container>
      );
 }

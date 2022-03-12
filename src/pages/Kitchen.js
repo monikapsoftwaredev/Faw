@@ -1,53 +1,42 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom'
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import{ Box, Container , ImageList , ImageListItem , Typography} from '@mui/material';
+import { photoList }  from '../data/photoList';
 
 
 
-const Kitchen = () => {
 
-    const navigate = useNavigate();
-    return (
-      <Box  sx={{marginTop:'200px' ,  marginLeft:'200px'}}>
-        <Card sx={{ maxWidth: 345, pt:'20px' ,px:'10px' ,   backgroundColor:'#eae1dc' , mt:'150px' }}>
-              <CardMedia
-                component="img"
-                height="210"
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1TkE4fc_rhiNk8Exwc78E8rwSQegd5F84w&usqp=CAU"
-              />
-              
-              <CardActions>
-                <Button 
-                 variant='text'
-                 size="large"
-                 onClick= { () => navigate("/")}
-                 sx={{ mx:'auto' , my:'10'  , color:'#2f2d29'}}
-                 
-                 >
-                < Typography 
-                 varient='h6'
-                 sx={{
-                   textTransform:'capitalize' , 
-                   mx:'2', 
-                   my:'2',
-                   px:'30px' , 
-                   
-                   }}>
-                   Kitchen
-                </Typography>
-                </Button>
-               </CardActions>
-        </Card>
-           
-    </Box>
-        
-        
-  );
-}
- 
-export default Kitchen;
+
+
+  const Kitchen = () => {
+
+      return (
+        <Container maxWidth='false' height= "100vh" width='70vh' sx={{ maxHeight:'100%'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"white" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
+            <Box sx={{ width:'3650px', height:'auto' , }}>
+              <ImageList variant="masonry" cols={3} gap={30}>
+                {photoList.map((p) => (
+                  <ImageListItem key={p.img}>
+                    <img
+                      src={`${p.img}?w=248&fit=crop&auto=format`}
+                      srcSet={`${p.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      alt={p.title}
+                      loading="lazy"
+                    />
+                    <Box sx={{ width:'auto', height:'auto', bgcolor:'#f4ebe6' ,  display:'flex' ,alignItems:'center', justifyContent:'center' , py:'auto'}}>
+                          <Typography variant='h6'  sx={{ width:'300px', height:'250px' , pt:'100px' }}>
+                          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                        </Typography>
+                    </Box>
+                  </ImageListItem>
+                ))}
+               
+              </ImageList>
+             
+          </Box>
+        </Container>
+    );
+
+  }
+  
+  export default Kitchen;
+
+  //#EBE2DD  #f6f1ef #ebe2dd

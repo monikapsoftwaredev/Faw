@@ -40,12 +40,14 @@ const Navbar = () => {
   };
 
   //, mt:'150px'
-  //  #eae1dc
+  //  #eae1dc  #f6f1ef  #dbcfc9 #F4EBE6  #EBE2DD
 
   const Styles = {
       appbar:{
         backgroundColor:"#dbcfc9" , 
         position:'fixed',
+        overflow:'hidden'
+        
        
       } , 
       logo:{

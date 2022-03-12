@@ -1,41 +1,41 @@
-import React from 'react';
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import * as React from 'react';
+import{ Box, Container , ImageList , ImageListItem } from '@mui/material';
+import {photos}  from '../data/complitedProjectsList';
 
 
-const About = () => {
-    return ( 
-        
-        <Box sx={{bgcolor: "pink", height: "100vh"}}> About</Box>
-       
-       
-     );
-}
+
+
+const Projects = () => {
+
+  const kitchenPhoto = photos.map(photo => { 
+    return (
+      <ImageListItem key={photo.id}>
+          <img
+            src={`${photo.path}?w=248&fit=crop&auto=format`}
+            srcSet={`${photo.path}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            alt={photo.title}
+            loading="lazy"
+           
+          />
+          
+    </ImageListItem>
+    )
+  });
+
+
+return (
+    <Container maxWidth='xl' sx={{ maxHeight:'auto'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"white" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
+      <Box sx={{ width:'1650px', height:'auto' }}>
+            <ImageList variant="masonry" cols={2} gap={8}>
+              {kitchenPhoto} 
+            </ImageList>
+        </Box>
+    </Container>
+  );
+
+  }
+
  
-export default About ;
+export default Projects;
 
-
-
-
-            /* <CardActions>
-                    <Button 
-                    variant='text'
-                    size="large"
-                    onClick= { () => navigate("/")}
-                    sx={{ mx:'auto' , my:'10'  , color:'#2f2d29'}}
-                    
-                    >
-                    < Typography 
-                    varient='h6'
-                    sx={{
-                    textTransform:'capitalize' , 
-                    mx:'2', 
-                    my:'2',
-                    px:'30px' , 
-                    
-                    }}>
-                    Kitchen
-                    </Typography>
-                    </Button>
-                </CardActions>
-                 */
+//#EBE2DD #ebe2dd
