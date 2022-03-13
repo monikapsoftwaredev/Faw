@@ -1,15 +1,26 @@
-import React from 'react';
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import * as React from 'react';
+import{ Box, Container , Typography} from '@mui/material';
+
+
+
 
 
 const Bathroom = () => {
-    return ( 
-        
-        <Box sx={{ height: "100vh"}}> Bathroom</Box>
-       
-       
-     );
-}
+
+  
+
+
+    return (
+        <Container maxWidth='xl' sx={{ height:'100vh'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"#FFFFFF" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
+        <Box sx={{ width:'1650px', height:'100%' , display:'flex' , alignItems:'center',  justifyContent:'space-evenly'  }}>
+                    <Typography variant="h5">
+                     Sorry , but the gallery is currently empty
+                    </Typography>
+        </Box>
+        </Container>
+    );
+
+  }
+
  
-export default Bathroom ;
+export default Bathroom;

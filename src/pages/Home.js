@@ -4,9 +4,7 @@ import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/ma
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+
 
 
 
@@ -78,7 +76,7 @@ const Home = () => {
                     <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wordrobe.jpg"/ >
 
                     <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                        <Button variant="contained" sx={{bgcolor:'#dbcfc9',  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('wordrobe')} >
+                        <Button variant="contained" sx={{bgcolor:'#dbcfc9',  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('wardrobe')} >
                         <Typography varient='h2' sx={{ textTransform:'capitalize' ,fontWeight:'300', color:'#2f2d29'}} > 
                             Wordrobe
                         </Typography>
@@ -115,12 +113,12 @@ const Home = () => {
         {/* Service process creation section*/ }
 
         <Box sx={{ maxHeight:'900' , width:'100%' ,pt:'50px' ,   bgcolor:"#ebe2dd"  }}>
-            <Box sx={{  maxHeight:'200px' , width:'auto'  , display:'flex' , alignItems:'center' , justifyContent:'center'}}>
-                <Typography component='div' variant="h4" sx={{fontWeight:'280' ,  width:'700px' , pl:'160px'  , pb:'10px'}}>
-                  We will draw Your Dream Kitchen
+            <Box sx={{  maxHeight:'200px' , width:'auto'  , display:'flex' , alignItems:'center' , justifyContent:'center' }}>
+                <Typography component='div' variant="h4" sx={{fontWeight:'270' ,  width:'800px'  , py:'30px' }}>
+                  We always create an original and unique project in 3D 
                 </Typography>
             </Box>
-            <Box sx={{display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'30px'}}>
+            <Box sx={{display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'90px'}}>
                 <Box sx={{  px:'50px' , py:'30px' , maxWidth:'300px' , display:'flex' , flexDirection:'column' , alignItems:'center', justifyItems:'center' ,  position:'relative' }}>
                     <Box>
                             <Box component='img' 
@@ -177,18 +175,17 @@ const Home = () => {
             <Box sx={{ maxHeight:'900px' , width:'auto'   }}>
                 <Box sx={{py:'30px'}} >
                     <Typography  variant='h4' sx={{ fontWeight:'290'  }}>
-                        Do You need advice, inspiration or tips ?
+                      Unique and Quality made Furniture
                     </Typography>
                 </Box>
                 <Box sx={{pb:'30px'}}>
                     <Typography variant='body1' sx={{ fontWeight:'300',  width:'400px' }}>
-                        Thanks to our experience and our expertise with great pleasure, 
-                        We will help You to find the best solution for your new kitchen.
+                      We create unique kitchen furniture tailored to your needs. We offer our clients a comprehensive service, which includes furniture design, measurement, execution and professional assembly.
                     </Typography>
                 </Box>
                 <Box sx={{bgcolor:'dbcfc9' ,  width:'100%' , height:'auto' , display:'flex' , justifyContent:'flexStart' }}>
                         <Button variant="contained" sx={{bgcolor:'#dbcfc9', opacity:' 0.8' ,px:'50px' , borderRadius:'0'}} onClick={()=> console.log('clicked')} >
-                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' ,fontSize:' 1rem' ,  lineHeight:' 1.5'  ,  width:'160', mx:'auto'}} > 
+                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' ,fontSize:' 1rem' ,  lineHeight:' 1.8'  ,  width:'160', mx:'auto'}} > 
                             More
                         </Typography>
                         </Button>
@@ -291,52 +288,7 @@ const Home = () => {
 
                 </Box>      
             </Box>
-              {/* Media section nr 3 dbcfc9 EBE2DD 
-               <Box   sx={{ maxHeight:'400px', width:'100%'  ,   bgcolor:"#dbcfc9"   }}>
-                    <Box   sx={{ height:'auto', width:'100%' , pt:'60px' , display:'flex' , alignItems:'center' , justifyContent:'center'  }}>  
-                            <Box>
-                                <Button variant="text" sx={{ px:'30px' , borderRadius:'0'}} onClick={()=> console.log(' Facebook')}  >
-                                   <FacebookIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
-                                </Button>
-                            </Box>
-                            <Box>
-                                <Button variant="text" sx={{ px:'30px' , borderRadius:'0'}} onClick={()=> console.log('Instagram')} >
-                                    <InstagramIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
-                                </Button>
-                            </Box>
-                            <Box>
-                                <Button variant="text" sx={{ px:'30px' , borderRadius:'0' , border:'3px solid green'}} onClick={()=> console.log(' Youtube')}>
-                                    <YouTubeIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
-                                </Button>
-                            </Box>
-                    </Box> 
-               
-                    <Box sx={{bgcolor:'dbcfc9' ,  width:'100%' , height:'auto' , display:'flex' , justifyContent:'space-around' }}>
-                                <Box  sx={{maxHeight:'auto', maxWidth:'auto' , py:'30px' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                                    <Typography>
-                                    &copy;Copyright 2022
-                                    </Typography>
-                                </Box>
-                                <Box  sx={{maxHeight:'auto', maxWidth:'auto' , py:'10px' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                                    
-                                    <Box>
-                                        <Typography>
-                                        Created by :
-                                        </Typography>
-                                    </Box>       
-                                    
-                                    <Box>
-                                        <Button variant="text" sx={{bgcolor:'transparent' , px:'10px' , borderRadius:'0'}} onClick={()=> console.log(' M&P Design')} >
-                                            <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'400' ,   color:'#787774' ,fontSize:' 1rem' ,  lineHeight:' 1.5'}} > 
-                                            M&P Webdesign & Development
-                                            </Typography>
-                                        </Button>      
-                                    </Box>
-                                
-                                </Box>         
-                    </Box>  
-
-            </Box> */ }
+             
      </Container>
      );
 }

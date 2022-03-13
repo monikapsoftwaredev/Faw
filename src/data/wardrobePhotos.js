@@ -1,4 +1,4 @@
-export const wordrobePhotos = [
+export const wardrobePhotos = [
 
     
     { id:'10' , 

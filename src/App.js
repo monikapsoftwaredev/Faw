@@ -4,7 +4,7 @@ import Navbar from './components/nav/Nav';
 import Fotter from './components/footer/Footer';
 import Home from './pages/Home';
 import Kitchen from './pages/Kitchen';
-import Wordrobe from './pages/Wordrobe';
+import Wardrobe from './pages/Wardrobe';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Error from './pages/.Error';
@@ -23,11 +23,11 @@ function App() {
         <Navbar/>
       
       
-      <BasicContainer maxWidth='false'  backgroundColour='red'  height= "100vh" width='80vh'  sx={{overflowY:' hidden'}} >
+      <BasicContainer maxWidth='false'  backgroundColour='red'  height= "100vh" width='80vh'  sx={{overflow:' hidden'}} >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="kitchen" element={<Kitchen/>} />
-          <Route path="wordrobe" element={<Wordrobe />} />
+          <Route path="wardrobe" element={<Wardrobe />} />
           <Route path="bathroom" element={<Bathroom />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
@@ -46,29 +46,3 @@ function App() {
 export default App;
 
 
-
-/*  function App() {
-  return (
-    <div>
-      <div>
-        <Navbar/>
-      </div>
-      <div >
-      <Container maxWidth='false' sx={{bgcolor: "#FFFFFF", height: "100vh"}} >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="kitchen" element={<Kitchen />} />
-          <Route path="wordrobe" element={<Wordrobe />} />
-          <Route path="bathroom" element={<Bathroom />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Container>
-      </div>
-     
-      
-     
-    </div>
-  );
-} */

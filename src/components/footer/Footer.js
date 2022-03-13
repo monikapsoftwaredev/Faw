@@ -16,7 +16,7 @@ const Fotter = () => {
 
     return ( 
        
-        <Box sx={{ height:'70px' ,  width:'auto'  ,   bgcolor:" #dbcfc9" , display:'flex' , flexDirection:'row', alignItems:'center' , justifyContent:'space-around'  }}>
+        <Box sx={{ height:'70px' ,  width:'100%'  ,   bgcolor:" #dbcfc9" , display:'flex' , flexDirection:'row', alignItems:'center' , justifyContent:'space-around' , overflowY:'hidden' }}>
                     
                     
                                 <Box sx={{bgcolor:'dbcfc9' }}>
