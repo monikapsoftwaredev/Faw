@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/nav/Nav';
 import Fotter from './components/footer/Footer';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Kitchen from './pages/Kitchen';
 import Wordrobe from './pages/Wordrobe';
