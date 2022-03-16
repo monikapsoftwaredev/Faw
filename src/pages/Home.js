@@ -4,6 +4,7 @@ import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/ma
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import{ styles} from '../styles/homeStyles'
 
 
 
@@ -24,21 +25,21 @@ const Home = () => {
 
         {/* Header section */ }
 
-        <Box sx={{ maxHeight:'auto' ,  width:'auto' ,  bgcolor:"#ebe2dd" , py:'40px'  , display:'flex' , alignItems:'center' , justifyContent:'center' }}> 
+        <Box sx={styles.headerBoxLg}> 
             <Box sx={{  maxWidth:'1500px',  borderRadius:'10' , display:"flex", alignItems:'center' , justifyContent:"center"  , mx:'auto' ,  my:'40px' , bgcolor:'#ebe2dd' }}>
                     <Box
                     component='img' 
-                    sx={{maxHeight:'488px' , maxWidth:'800px' , paddingRight:'20px'   }} 
+                    sx={{maxHeight:'488px' , maxWidth:'800px', paddingLeft:'80px'    }} 
                     alt="kitchen"
                     src="../assets/mainContentPhotos/kitchen3.jpg"  
                     />
                 
 
-                    <Box sx={{ maxHeight:"522px", px:'20px' , mx:'90px'}}> 
+                    <Box sx={styles.headerTextBox}> 
                         <Typography
                         component='div'
                         variant='h4'
-                        sx={{color:'#2f2d29' , width:'320px' , height:'300px' ,fontWeight:'300' ,lineHeight:'1.8' ,  display:'flex' , alignItems:'center' , justifyContent:'center'}}
+                        sx={{fontWeight:'280'}}
                         >
                             We will design and make Your dream Kitchen
 
@@ -49,19 +50,19 @@ const Home = () => {
             </Box>
         </Box>
 
-        {/*  Services presentation section  */ }
+        {/*  Services presentation , section1  */ }
 
-        <Box   sx={{ maxHeight:'auto' , width:'auto'  , bgcolor:'#f7f4f2' , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'50px' }}>
-            <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
+        <Box   sx={styles.sectionOneBoxLg}>
+            <Box sx={styles.sectionOneBoxMd}>
 
-                <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative' }}>
+                <Card sx={styles.card}>
                     <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
                 
-                    <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                        <Button variant="contained" sx={{bgcolor:'#dbcfc9', opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=> navigate('kitchen')} >
-                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' }} > 
-                            Kitchen
-                        </Typography>
+                    <Box sx={styles.mediaBox}>
+                        <Button variant="contained"  disableRipple={true} sx={styles.mediaButton} onClick={()=> navigate('kitchen')} >
+                                <Typography varient='h2' sx={styles.text}> 
+                                    Kitchen
+                                </Typography>
                         </Button>
                     </Box>
 
@@ -70,14 +71,14 @@ const Home = () => {
                 </Card>
 
             </Box>
-            <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
+            <Box sx={styles.sectionOneBoxMd}>
 
-                <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative'}}>
-                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wordrobe.jpg"/ >
+                <Card sx={styles.card}>
+                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wordrobe.jpg" />
 
-                    <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                        <Button variant="contained" sx={{bgcolor:'#dbcfc9',  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('wardrobe')} >
-                        <Typography varient='h2' sx={{ textTransform:'capitalize' ,fontWeight:'300', color:'#2f2d29'}} > 
+                    <Box sx={styles.mediaBox }>
+                        <Button variant="contained"  disableRipple={true} sx={styles.mediaButton} onClick={()=>navigate('wardrobe')} >
+                        <Typography varient='h2' sx={styles.text} > 
                             Wordrobe
                         </Typography>
                         </Button>
@@ -88,14 +89,14 @@ const Home = () => {
                 </Card>
 
             </Box>
-            <Box sx={{ maxHeight:'900px' , width:'auto' ,py:'90px'  }}>
+            <Box sx={styles.sectionOneBoxMd}>
 
-                <Card sx={{ maxWidth:'310px',  bgcolor:"#eae1dc" , mx:'auto' ,borderRadius:'0' ,  position:'relative'}}>
+                <Card sx={styles.card}>
                     <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/bath.jpg"/ >
 
-                    <Box sx={{bgcolor:'transparent',  position:'absolute' ,  bottom:'0', right:'0', zIndex:'100', width:'100%' , height:'30%' , display:'flex' , justifyContent:'center' , alignItems:'center' }}>
-                        <Button variant="contained" sx={{bgcolor:'#dbcfc9' ,  opacity:' 0.8' ,px:'40px' ,   borderRadius:'0' }} onClick={()=>navigate('bathroom')}>
-                        <Typography varient='h2' sx={{ textTransform:'capitalize' ,fontWeight:'300', color:'#2f2d29'  }} > 
+                    <Box sx={styles.mediaBox}>
+                        <Button variant="contained"  disableRipple={true}   sx={styles.mediaButton} onClick={()=>navigate('bathroom')}>
+                        <Typography varient='h2' sx={styles.text} > 
                             Bathroom
                         </Typography>
                         </Button>
@@ -112,48 +113,48 @@ const Home = () => {
 
         {/* Service process creation section*/ }
 
-        <Box sx={{ maxHeight:'900' , width:'100%' ,pt:'50px' ,   bgcolor:"#ebe2dd"  }}>
-            <Box sx={{  maxHeight:'200px' , width:'auto'  , display:'flex' , alignItems:'center' , justifyContent:'center' }}>
-                <Typography component='div' variant="h4" sx={{fontWeight:'270' ,  width:'800px'  , py:'30px' }}>
+        <Box sx={styles.sectionTwoBoxLg}>
+            <Box sx={styles.sectionTwoBoxMd}>
+                <Typography component='div' variant="h4" sx={{fontWeight:'270' }} >
                   We always create an original and unique project in 3D 
                 </Typography>
             </Box>
-            <Box sx={{display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'90px'}}>
-                <Box sx={{  px:'50px' , py:'30px' , maxWidth:'300px' , display:'flex' , flexDirection:'column' , alignItems:'center', justifyItems:'center' ,  position:'relative' }}>
+            <Box sx={styles.sectionTwoPhotoContainerLg}>
+                <Box sx={styles.sectionTwoPhotoContainerMd}>
                     <Box>
                             <Box component='img' 
-                            sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
+                            sx={styles.sectionTwoImgBox}
                             alt="design"
                             src="../assets/mainContentPhotos/design6.jpg" />
                     </Box>
-                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7', px:'20px',  position:'absolute' ,  bottom:'16%', zIndex:'10'   }}>
-                        <Typography component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29'  , py:'5px', mx:'auto' ,fontSize:' 1rem' ,  lineHeight:' 1.5' }}>
+                    <Box  sx={styles.sectionTwoTextBox}>
+                        <Typography component='div' variant="h6" sx={{ fontWeight:'300' , fontSize:' 1rem'}} >
                             Design Kitchen
                         </Typography>
                     </Box>
                 </Box>
-                <Box sx={{px:'50px' , py:'30px' ,  maxWidth:'300px' , display:'flex' , flexDirection:'column' , alignItems:'center' , justifyItems:'center' , position:'relative'}}>
+                <Box sx={styles.sectionTwoPhotoContainerMd}>
                     <Box>
                         <Box component='img' 
-                               sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
+                               sx={styles.sectionTwoImgBox} 
                                 alt="hand"
                                 src="../assets/mainContentPhotos/hand.jpg" />
                     </Box>
-                    <Box sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9' , opacity:' 0.7' ,px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'10'  }}>
-                        <Typography  component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29' , py:'5px', mx:'auto'  ,fontSize:' 1rem' ,  lineHeight:' 1.5' }}>
+                    <Box sx={styles.sectionTwoTextBox}>
+                        <Typography  component='div' variant="h6"sx={{ fontWeight:'300' , fontSize:'1rem'}}  >
                             Signing Contract
                         </Typography>
                     </Box>
                 </Box>
-                <Box sx={{px:'50px' , py:'30px' ,  maxWidth:'300px' , display:'flex' , flexDirection:'column' , alignItems:'center' , justifyItems:'center' , position:'relative'}}>
+                <Box sx={styles.sectionTwoPhotoContainerMd}>
                     <Box>
                         <Box component='img'
-                               sx={{height:'310px' , maxWidth:'300px'  , backgroundSize:' cover ', backgroundRepeat:'noRepeat' ,backgroundPosition:' center' , width:' 100%' ,objectFit:' cover'   }} 
+                               sx={styles.sectionTwoImgBox} 
                                 alt="kitchen"
                                 src="../assets/mainContentPhotos/assemb6.jpg" />
                     </Box>
-                    <Box  sx={{  maxWidth:'160' , display:'flex'  , alignItems:'center', justifyItems:'center'  , mx:'auto'  ,bgcolor:'#dbcfc9', opacity:' 0.7' , px:'20px',   position:'absolute' ,  bottom:'16%', zIndex:'10' , }}>
-                        <Typography component='div' variant="h6" sx={{fontWeight:'300' ,  width:'160', color:'#2f2d29' , py:'5px', mx:'auto'  ,fontSize:' 1rem' ,  lineHeight:' 1.5'}}>
+                    <Box  sx={styles.sectionTwoTextBox}>
+                        <Typography component='div'  variant="h6" sx={{ fontWeight:'300' , fontSize:'1rem'}}  >
                             Your Kitchen
                         </Typography> 
                     </Box>
@@ -161,31 +162,31 @@ const Home = () => {
             </Box>
         </Box>
 
-        {/* Advice , inspiration , tips section*/ }
+        {/* Advice , inspiration , tips ,section3*/ }
 
-        <Box   sx={{ maxHeight:'auto' , width:'auto'  , bgcolor:'#f7f4f2' , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' , py:'100px' }}>
-            <Box sx={{ maxHeight:'900px' , width:'400px'   }}>
+        <Box   sx={styles.sectionTreeBoxLg}>
+            <Box sx={styles.sectionTreeBoxMd}>
 
-                <Card sx={{ maxWidth:'510px',  bgcolor:"#eae1dc" ,  mx:'auto' ,borderRadius:'0' }}>
+                <Card sx={styles.sectionTreeCard}>
                     <CardMedia component="img" height="510px" image="../assets/mainContentPhotos/advice.jpg"/ >
                 
                 </Card>
 
             </Box>
-            <Box sx={{ maxHeight:'900px' , width:'auto'   }}>
+            <Box sx={styles.sectionTreeTextBox}>
                 <Box sx={{py:'30px'}} >
                     <Typography  variant='h4' sx={{ fontWeight:'290'  }}>
                       Unique and Quality made Furniture
                     </Typography>
                 </Box>
                 <Box sx={{pb:'30px'}}>
-                    <Typography variant='body1' sx={{ fontWeight:'300',  width:'400px' }}>
+                    <Typography variant='body1' sx={{ fontWeight:'300',  width:'500px' }}>
                       We create unique kitchen furniture tailored to your needs. We offer our clients a comprehensive service, which includes furniture design, measurement, execution and professional assembly.
                     </Typography>
                 </Box>
-                <Box sx={{bgcolor:'dbcfc9' ,  width:'100%' , height:'auto' , display:'flex' , justifyContent:'flexStart' }}>
-                        <Button variant="contained" sx={{bgcolor:'#dbcfc9', opacity:' 0.8' ,px:'50px' , borderRadius:'0'}} onClick={()=> console.log('clicked')} >
-                        <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'300' , color:'#2f2d29' ,fontSize:' 1rem' ,  lineHeight:' 1.8'  ,  width:'160', mx:'auto'}} > 
+                <Box sx={styles.sectionTreeButtonBox}>
+                        <Button variant="contained" disableRipple= {true}  sx={styles.buttonText} onClick={()=> console.log('clicked')} >
+                        <Typography component='div' varient='h2' sx={{ fontWeight:'300' , fontSize:'1rem'}}   > 
                             More
                         </Typography>
                         </Button>
@@ -195,33 +196,33 @@ const Home = () => {
         </Box>
          {/* Contact section* #ebe2dd #e2d8d3 */ }
          
-        <Box sx={{ maxHeight:'900px', width:'100%' , py:'10px' , bgcolor:'#ebe2dd'   , display:'flex' , alignItems:'center' , justifyContent:'space-evenly' }}>
+        <Box sx={styles.sectionFourBoxLg}>
 
                 {/* Contact section nr 1 */ }
-                <Box sx={{height:'410px' , width:'360px', my:'30px' ,  bgcolor:'#ebe2dd'  , px:'10px' ,  pt:'20px', }}>
-                    <Box sx={{display:'flex' ,  flexDirection:'column' ,  alignItems:'center' , justifyContent:'center' , mb:'20px'}}>
-                        <PhoneOutlinedIcon  sx={{fontSize:'65px' , fontWeight:'200' ,  color:'#787774'}} />
-                        <Box >
-                            <Typography variant='h4' sx={{textTransform:'uppercase' , color:'#2f2d29' , fontWeight:'350' , px:'30px' , pt:'20px' , pb:'30px' }}>
+                <Box sx={styles.sectionFourBoxMd}>
+                    <Box sx={styles.sectionFourIconBox}>
+                        <PhoneOutlinedIcon  sx={styles.sectionFourIcon} />
+                        <Box sx={styles.sectionFourTextBox}>
+                            <Typography variant='h4' sx={{ fontWeight:'350'}} >
                             Phone
                             </Typography>
                        </Box>
                         
                     </Box>     
                    
-                    <Box sx={{display:'flex' ,flexDirection:'column' , alignItems:'center' , justifyContent:'center' , }} >
+                    <Box sx={styles.sectionFourInfoBox} >
                         <Box>
-                                <Typography  variant='h5' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'250', px:'30px' , py:'5px' }}>
-                                Faw office 
+                                <Typography  variant='h5'sx={{ fontWeight:'200' }}  >
+                                 Faw office 
                                 </Typography>
                         </Box> 
                         <Box  sx={{ mx:'auto' , pl:'7px' }}>  
-                                <Typography  variant='h6' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                                <Typography  variant='h6' sx={{ fontWeight:'200' }} >
                                    966xxxxxx
                                 </Typography>
                         </Box>
-                        <Box  sx={{ mx:'auto' , pl:'7px' }}> 
-                                <Typography  variant='h6' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                        <Box  sx={{ mx:'auto' , pl:'7px'  }}> 
+                                <Typography  variant='h6'sx={{ fontWeight:'200' }} >
                                    456xxxxxx
                                 </Typography>
                         </Box>
@@ -229,30 +230,30 @@ const Home = () => {
                 </Box>
 
                 {/* Contact section nr 2 */ }
-                <Box sx={{height:'410px' , width:'360px', my:'30px' ,  bgcolor:'#ebe2dd'  , px:'10px' ,  pt:'20px'}}>
-                   <Box sx={{display:'flex' ,flexDirection:'column'  , alignItems:'center' , justifyContent:'center' , mb:'20px'}}>
-                        < LocationOnIcon sx={{fontSize:'65px' , fontWeight:'200' ,  color:'#787774'}} />
-                        <Box>
-                                <Typography variant='h4' sx={{textTransform:'uppercase' , color:'#2f2d29' , fontWeight:'350' , px:'30px' , pt:'20px' , pb:'30px' }}>
+                <Box sx={styles.sectionFourBoxMd}>
+                   <Box sx={styles.sectionFourIconBox}>
+                        < LocationOnIcon sx={styles.sectionFourIcon} />
+                        <Box sx={styles.sectionFourTextBox} >
+                                <Typography variant='h4' sx={{ fontWeight:'350'  }}>
                                   Adress
                                 </Typography>
                         </Box>
                         
                     </Box> 
                      <Box   sx={{display:'flex', flexDirection:'column'  }} >   
-                         <Box  sx={{display:'flex' ,flexDirection:'column' , alignItems:'center' , justifyContent:'center' , }}>
-                                <Typography  variant='h5' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'250', px:'30px' , py:'5px' }}>
+                         <Box  sx={styles.sectionFourInfoBox}>
+                                <Typography  variant='h5' sx={{ fontWeight:'200' }}>
                                 Faw xxxxxxxxxxxxx
                                 </Typography>
                         </Box> 
                         <Box  sx={{ mx:'auto' , pl:'7px' }}>
-                                <Typography  variant='h6' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                                <Typography  variant='h6' sx={{ fontWeight:'200' }}>
                                 Lillesxxxxxxx
                                 </Typography>
-                                <Typography  variant='h6' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                                <Typography  variant='h6' sx={{ fontWeight:'200' }}>
                                 1914 xxxxxxxxx
                                 </Typography>
-                                <Typography  variant='h6' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                                <Typography  variant='h6' sx={{ fontWeight:'200'}}>
                                 NOxxxxxxxxxxxxx
                                 </Typography>
                         </Box>
@@ -261,12 +262,11 @@ const Home = () => {
                 </Box> 
             
                 {/* Contact section nr 3 */ }
-                <Box sx={{height:'410px' , width:'360px',my:'30px'  ,   bgcolor:'#ebe2dd'  , px:'10px'  , pt:'20px'}}>
-                    <Box  sx={{display:'flex' ,flexDirection:'column'  , alignItems:'center' , justifyContent:'center' , mb:'20px' }}>
-                      
-                        <MailOutlineIcon  sx={{fontSize:'65px' , fontWeight:'200' ,  color:'#787774'}} />
-                        <Box>
-                            <Typography variant='h4' sx={{textTransform:'uppercase' , color:'#2f2d29' , fontWeight:'350' , px:'30px' , pt:'20px' , pb:'30px' }}>
+                <Box sx={styles.sectionFourBoxMd}>
+                    <Box  sx={styles.sectionFourIconBox}>
+                      <MailOutlineIcon  sx={styles.sectionFourIcon} />
+                        <Box sx={styles.sectionFourTextBox}>
+                            <Typography variant='h4' sx={{fontWeight:'350' }}>
                             Email
                             </Typography>
                         </Box>
@@ -274,13 +274,13 @@ const Home = () => {
                     </Box>     
                        
                     <Box sx={{display:'flex' ,flexDirection:'column'  }}>
-                        <Box sx={{display:'flex' ,flexDirection:'column' , alignItems:'center' , justifyContent:'center' , }}>
-                                <Typography  variant='h5' sx={{textTransform:'capitalize' , color:'#2f2d29' , fontWeight:'250', px:'30px' , py:'5px' }}>
+                        <Box sx={styles.sectionFourInfoBox}>
+                                <Typography  variant='h5' sx={{fontWeight:'250' }}>
                                 Faw office 
                                 </Typography>
                         </Box> 
                         <Box  sx={{ mx:'auto' , pl:'7px' }}>
-                                <Typography  variant='h6' sx={{textTransform:'lowercase' , color:'#2f2d29' , fontWeight:'300', px:'30px' , py:'5px' , mx:'auto' }}>
+                                <Typography  variant='h6' sx={{ fontWeight:'200' }}>
                                 fawxxxxxxx@gmail.com
                                 </Typography>
                         </Box>

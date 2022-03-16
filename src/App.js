@@ -7,7 +7,7 @@ import Kitchen from './pages/Kitchen';
 import Wardrobe from './pages/Wardrobe';
 import Projects from './pages/Projects';
 import About from './pages/About';
-import Error from './pages/.Error';
+import Error from './pages/Error';
 import BasicContainer from "./components/basicContainer/BasicContainer";
 import Bathroom from './pages/Bathroom';
 
@@ -18,12 +18,12 @@ import Bathroom from './pages/Bathroom';
 
 function App() {
   return (
-    <>
+    <div style={{overflow:' hidden' , position:'relative'}} >
       
         <Navbar/>
       
       
-      <BasicContainer maxWidth='false'  backgroundColour='red'  height= "100vh" width='80vh'  sx={{overflow:' hidden'}} >
+      <BasicContainer maxWidth='false'  height= "100vh" width='80vh'  sx={{overflow:' hidden' , position:'relativ'}} >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="kitchen" element={<Kitchen/>} />
@@ -36,10 +36,11 @@ function App() {
         </Routes>
       </BasicContainer>
       <Fotter/>
+      
      
       
      
-    </>
+    </div>
   );
 }
 

@@ -7,18 +7,14 @@ export const styles = {
         display:'flex' , 
         flexWrap:'wrap' ,
         alignItems:'center', 
-        justifyContent:'space-evenly' 
+        justifyContent:'space-evenly'
     } , 
-
-    boxMd:{
+    boxMd :{
         width:'1650px', 
         height:'100%' , 
         display:'flex' , 
         alignItems:'center',  
-        justifyContent:'space-evenly'
-    } , 
-
-    text:{
-        fontWeight:300 ,
+        justifyContent:'space-evenly' 
     }, 
+    
 }

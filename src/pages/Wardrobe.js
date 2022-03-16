@@ -1,6 +1,7 @@
 import * as React from 'react';
 import{ Box, Container , ImageList , ImageListItem } from '@mui/material';
 import {wardrobePhotos}  from '../data/wardrobePhotos';
+import { styles } from  '../styles/wardrobe';
 
 
 
@@ -24,8 +25,8 @@ const Wardrobe = () => {
 
 
 return (
-    <Container maxWidth='xl' sx={{ height:'100vh'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"#FFFFFF" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
-      <Box sx={{ width:'1650px', height:'100%' , display:'flex' , alignItems:'center',  justifyContent:'space-evenly'  }}>
+    <Container maxWidth='xl' sx={styles.boxLg} >
+      <Box sx={ styles.boxMd }>
                 <ImageList variant="masonry" cols={3} gap={40}>
                   {wardrobe} 
                 </ImageList>

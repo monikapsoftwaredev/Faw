@@ -11,6 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container'
 import MenuItem from '@mui/material/MenuItem';
 import {navbarPages} from './navbarPages';
+import { styles } from './navbarStyles';
 
 
 
@@ -42,47 +43,11 @@ const Navbar = () => {
   //, mt:'150px'
   //  #eae1dc  #f6f1ef  #dbcfc9 #F4EBE6  #EBE2DD
 
-  const Styles = {
-      appbar:{
-        backgroundColor:"#dbcfc9" , 
-        position:'fixed',
-        overflow:'hidden'
-        
-       
-      } , 
-      logo:{
-        mr: 15,
-        fontSize: '30px',
-        fontWeight:'420', 
-        color: '#2f2d29' , 
-        textTransform:'capitalize' , 
-            display: {
-                xs: 'none',
-                md: 'flex'
-             } 
-         } , 
-      box:{
-           flexGrow: 1, 
-           display: {
-                xs: 'flex',
-                md: 'none' 
-            }
-        } , 
-    text:{
-        "&.MuiButton-text": {
-            color: "#2f2d29",
-            
-          }
-    }, 
-   
-    
-   
-    }
-
+  
   
 
   return (
-    <AppBar sx={Styles.appbar} >
+    <AppBar sx={styles.appbar} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Box>
@@ -92,14 +57,14 @@ const Navbar = () => {
                 noWrap
                 component="div"
                 onClick={()=> navigate('/')}
-                sx={ Styles.logo}
+                sx={ styles.logo}
             >
             Faw
             </Typography>
           </Button>
           </Box>
 
-          <Box sx={Styles.box}>
+          <Box sx={styles.box}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -131,14 +96,14 @@ const Navbar = () => {
             >
             
               {navbarPages.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu} sx={Styles.menu}>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu} sx={styles.menu}>
                   <Typography textAlign="center" sx={{fontWeight:'300'}} onClick={()=> navigate(page.route.en)}>{page.title.en}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box  sx={Styles.box} >
-          <Button sx={Styles.text}>
+          <Box  sx={styles.box} >
+          <Button sx={styles.text}>
             <Typography
                 variant="h6"
                 noWrap
@@ -150,19 +115,21 @@ const Navbar = () => {
             </Typography>
           </Button>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={styles.boxMdNav}>
             {navbarPages.map((page) => (
               <Button
+                disableRipple= {true}
                 key={page.id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, mr: 2  , color: '#2f2d29', display: 'block' }}
+                sx={styles.buttonMdNav}
+               
                 
               >
               <Typography
                 noWrap
                 component="div"
                 onClick={()=> navigate(page.route.en)}
-                sx={{ fontSize: '15px' , textTransform:'capitalize' , fontWeight:'350' }}
+                sx={styles.textMdNav}
               >
                  {page.title.en} 
               </Typography>

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import{ Box, Container , Typography} from '@mui/material';
-import { styles } from '../styles/bathroom';
+import { styles } from '../styles/error';
 
 
 
 
 
-const Bathroom = () => {
+const Error = () => {
 
   
 
@@ -15,7 +15,7 @@ const Bathroom = () => {
         <Container maxWidth='xl' sx={styles.boxLg} >
         <Box sx={styles.boxMd}>
                     <Typography variant="h4" sx={styles.text}>
-                     Sorry , but the gallery is currently empty
+                     Sorry , but this side doesnt exist !
                     </Typography>
         </Box>
         </Container>
@@ -24,4 +24,4 @@ const Bathroom = () => {
   }
 
  
-export default Bathroom;
+export default Error;

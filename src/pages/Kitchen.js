@@ -1,6 +1,7 @@
 import * as React from 'react';
 import{ Box, Container , ImageList , ImageListItem , Typography} from '@mui/material';
 import { photoList }  from '../data/photoList';
+import {styles} from '../styles/kitchen'
 
 
 
@@ -10,9 +11,9 @@ import { photoList }  from '../data/photoList';
   const Kitchen = () => {
 
       return (
-        <Container maxWidth='false' height= "100vh" width='70vh' sx={{ maxHeight:'100%'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"white" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
-            <Box sx={{ width:'1650px', height:'auto' , }}>
-              <ImageList variant="masonry" cols={3} gap={30}>
+        <Container maxWidth='false' height= "100vh" width='70vh' sx={styles.boxLg} >
+            <Box sx={styles.imageListBox}>
+              <ImageList variant="masonry" cols={3} gap={80}>
                 {photoList.map((p) => (
                   <ImageListItem key={p.img}>
                     <img
@@ -20,10 +21,11 @@ import { photoList }  from '../data/photoList';
                       srcSet={`${p.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       alt={p.title}
                       loading="lazy"
+                      
                     />
-                    <Box sx={{ width:'auto', height:'auto', bgcolor:'#f4ebe6' ,  display:'flex' ,alignItems:'center', justifyContent:'center' , py:'auto'  }}>
-                          <Typography variant='h6'  sx={{ width:'200px', height:'150px' , display:'flex' , alignItems:'center'  , justifyContent:'center'  }}>
-                          established
+                    <Box sx={ styles.textBox}>
+                          <Typography variant='h6'component='span'  >
+                          {p.desc}
                         </Typography>
                     </Box>
                   </ImageListItem>

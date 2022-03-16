@@ -1,6 +1,7 @@
 import * as React from 'react';
 import{ Box, Container , ImageList , ImageListItem } from '@mui/material';
-import {photos}  from '../data/complitedProjectsList';
+import { photos }  from '../data/complitedProjectsList';
+import { styles } from '../styles/projects';
 
 
 
@@ -21,14 +22,15 @@ const Projects = () => {
     </ImageListItem>
     )
   });
+ 
 
 
 return (
-    <Container maxWidth='xl' sx={{ maxHeight:'auto'  ,  mt:'66px' ,py:'50px' ,   bgcolor:"white" , display:'flex' , flexWrap:'wrap' ,alignItems:'center', justifyContent:'space-evenly' }} >
-      <Box sx={{ width:'1650px', height:'auto' }}>
-            <ImageList variant="masonry" cols={2} gap={8}>
-              {kitchenPhoto} 
-            </ImageList>
+    <Container maxWidth='xl' sx={styles.boxLg} >
+        <Box sx={styles.imageListBox}>
+             <ImageList variant="masonry" cols={2} gap={8}>
+                 {kitchenPhoto}
+             </ImageList>
         </Box>
     </Container>
   );
@@ -39,3 +41,14 @@ return (
 export default Projects;
 
 //#EBE2DD #ebe2dd
+
+/* {kitchenPhoto?(
+              <Box> 
+                      <ImageList variant="masonry" cols={2} gap={8}>
+                      {kitchenPhoto}
+                      </ImageList>
+              </Box>
+              ) :
+              ( <Box> Loading....</Box>)
+              }
+    */

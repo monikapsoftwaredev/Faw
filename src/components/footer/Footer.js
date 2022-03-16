@@ -5,6 +5,7 @@ import {  Typography , Button , Box  } from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import{ styles} from './footerStyles'
 
 
 
@@ -16,7 +17,7 @@ const Fotter = () => {
 
     return ( 
        
-        <Box sx={{ height:'70px' ,  width:'100%'  ,   bgcolor:" #dbcfc9" , display:'flex' , flexDirection:'row', alignItems:'center' , justifyContent:'space-around' , overflowY:'hidden' }}>
+        <Box sx={styles.sectionBoxLg}>
                     
                     
                                 <Box sx={{bgcolor:'dbcfc9' }}>
@@ -32,25 +33,25 @@ const Fotter = () => {
 
                                 {/*//////////////////////////////////////////////////////////////////////// */}  
 
-                                <Box sx={{maxHeight:'350px' , maxWidth:'500px',  display:'flex' , flexDirection:'row', alignItems:'center' , justifyContent:'center', pl:'210px' }}>  
-                                            <Box>
-                                                <Button variant="text" sx={{ borderRadius:'0'}} onClick={()=> console.log(' Facebook')}  >
-                                                <FacebookIcon sx={{fontSize:'35px' , fontWeight:'200' ,  color:'#787774'}}/>
+                                <Box sx={styles.sectionBoxMd1}>  
+                                            <Box  sx={{px:'30px'}}>
+                                                <Button variant="text"  disableRipple={true}  sx={styles.buttonIcon} onClick={()=> console.log(' Facebook')}  >
+                                                   <FacebookIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
                                                 </Button>
                                             </Box>
-                                            <Box>
-                                                <Button variant="text" sx={{ borderRadius:'0'}} onClick={()=> console.log('Instagram')} >
-                                                    <InstagramIcon sx={{fontSize:'35px' , fontWeight:'200' ,  color:'#787774'}}/>
+                                            <Box sx={{px:'30px'}}>
+                                                <Button variant="text"  disableRipple={true}  sx={styles.buttonIcon} onClick={()=> console.log('Instagram')} >
+                                                    <InstagramIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
                                                 </Button>
                                             </Box>
-                                            <Box>
-                                                <Button variant="text" sx={{ borderRadius:'0' }} onClick={()=> console.log(' Youtube')}>
-                                                    <YouTubeIcon sx={{fontSize:'35px' , fontWeight:'200' ,  color:'#787774'}}/>
+                                            <Box sx={{px:'30px'}}>
+                                                <Button variant="text"  disableRipple={true} sx={styles.buttonIcon} onClick={()=> console.log(' Youtube')}>
+                                                    <YouTubeIcon sx={{fontSize:'30px' , fontWeight:'200' ,  color:'#787774'}}/>
                                                 </Button>
                                             </Box>
                                 </Box> 
                                 {/*//////////////////////////////////////////////////////////////////////// */}
-                                <Box  sx={{maxHeight:'150px' , maxWidth:'500px' ,    display:'flex' , flexDirection:'row', alignItems:'baseline'}}>
+                                <Box sx={styles.sectionBoxMd2}>
                                             
                                             <Box>
                                                 <Typography>
@@ -59,7 +60,7 @@ const Fotter = () => {
                                             </Box>       
                                             
                                             <Box>
-                                                <Button variant="text" sx={{bgcolor:'transparent' , borderRadius:'0'}} onClick={()=> console.log(' M&P Design')} >
+                                                <Button variant="text" sx={{bgcolor:'transparent' , borderRadius:'0'}} onClick={()=> console.log('M&P Webdesign & Development')} >
                                                     <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'400' ,   color:'#787774' ,fontSize:' 1rem' ,  lineHeight:' 1.5'}} > 
                                                     M&P Webdesign & Development
                                                     </Typography>
