@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Routes, Route } from "react-router-dom";
+import { useTheme} from '@mui/material/styles';
 import Navbar from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Home from './pages/Home';
@@ -16,7 +17,12 @@ import Bathroom from './pages/Bathroom';
 
 
 
+
 function App() {
+
+  const theme = useTheme();
+  console.log(theme);
+  
   return (
     <div style={{overflow:' hidden' , position:'relative'}} >
        <Navbar/>

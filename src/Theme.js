@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
+
 export const theme = createTheme({
 
     palette :{
@@ -42,17 +43,9 @@ export const theme = createTheme({
         borderRadius: 0 , 
     } , 
     spacing: 10 , 
-    overrides:{
-        MuiButton:{
-          root:{
-            bgcolor:'green',
-            disableRipple : true,
-            color:"text" , 
-             
-            },
-            '&:hover':{
-              bgcolor:"third"
-            }
-        }
-    }
+
+   
 })
+
+
+

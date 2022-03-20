@@ -1,3 +1,4 @@
+import { theme } from "../Theme";
 
   export const styles = {
     headerBoxLg:{
@@ -74,12 +75,12 @@
 
 
     mediaButton:{
-      bgcolor:'#dbcfc9',
+      bgcolor:theme.palette.primary.main,
       opacity:' 0.8',
       px:'40px' ,   
        borderRadius:0 ,
       '&:hover':{
-        bgcolor:'#f7f4f2', 
+        bgcolor:theme.palette.third.main, 
         opacity:' 0.7'
       } , 
     } ,

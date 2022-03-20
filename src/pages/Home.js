@@ -59,7 +59,7 @@ const Home = () => {
                             <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
                         
                             <Box sx={styles.mediaBox}>
-                                <Button variant="contained"   onClick={()=> navigate('kitchen')} >
+                                <Button variant="contained" disableRipple={true} sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
                                         <Typography variant='h2' sx={styles.text}> 
                                             Kitchen
                                         </Typography>
@@ -126,7 +126,7 @@ const Home = () => {
                                 <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/design6.jpg"/ >
                             
                                 <Box sx={styles.mediaBox}>
-                                    <Button variant="contained"  disable={true} sx={styles.mediaButton} onClick={()=> ('#')} >
+                                    <Button variant="contained"  disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
                                             <Typography variant='h2' sx={styles.text}> 
                                                 Design Kitchen
                                             </Typography>
@@ -144,7 +144,7 @@ const Home = () => {
                                 <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/hand.jpg" />
 
                                 <Box sx={styles.mediaBox }>
-                                    <Button variant="contained"   disable={true} sx={styles.mediaButton} onClick={()=>('#')} >
+                                    <Button variant="contained"   disable='true' sx={styles.mediaButton} onClick={()=>('#')} >
                                     <Typography variant='h2' sx={styles.text} > 
                                         Signing Contract
                                     </Typography>
@@ -162,9 +162,9 @@ const Home = () => {
                                 <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/assemb6.jpg"/ >
 
                                 <Box sx={styles.mediaBox}>
-                                    <Button variant="contained"  disable={true} sx={styles.mediaButton} onClick={()=>navigate('#')}>
+                                    <Button variant="contained"  disable='true' sx={styles.mediaButton} onClick={()=>navigate('#')}>
                                     <Typography variant='h2' sx={styles.text} > 
-                                        Bathroom
+                                        Your Kitchen
                                     </Typography>
                                     </Button>
                                 </Box>
