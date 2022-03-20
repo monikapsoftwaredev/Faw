@@ -20,7 +20,7 @@ const Fotter = () => {
         <Box sx={styles.sectionBoxLg}>
                     
                     
-                                <Box sx={{bgcolor:'dbcfc9' }}>
+                                <Box sx={{ bgcolor:" #dbcfc9"  }}>
                                         <Box sx={{maxHeight:'150px' , maxWidth:'300px' }}>
                                                 <Typography>
                                                 &copy;Copyright 2022

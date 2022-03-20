@@ -5,7 +5,7 @@ import {styles } from '../styles/about';
 
   
 
- const About = () => {          
+ const About = () => {      
     return ( 
         <Container maxWidth='xl' sx={styles.boxLg} >
             
@@ -20,7 +20,7 @@ import {styles } from '../styles/about';
                     </Box>
                     <Box sx={styles.textBox}>
                         <Box sx={{py:'50px'}} >
-                            <Typography  variant='h3'sx={styles.title} >
+                            <Typography  variant='h4'sx={styles.title} >
                               Who We are ?
                             </Typography>
                         </Box>
@@ -33,7 +33,7 @@ import {styles } from '../styles/about';
                         </Box>
                         <Box sx={ styles.buttonBox}>
                                 <Button variant="contained" disableRipple= {true} sx={ styles.buttonBox} onClick={()=> console.log('clicked')} >
-                                <Typography varient='h2'  > 
+                                <Typography variant='h2' > 
                                     More
                                 </Typography>
                                 </Button>
@@ -43,6 +43,7 @@ import {styles } from '../styles/about';
                 </Box>  
                         
                 <Box sx={styles.boxOfferLg}>
+              
                    <Box  sx={styles.boxOfferMd} >
                         <Box sx={styles.boxTitle} >
                             <Typography  variant='h4'  sx={{ fontWeight:'290' }}>
@@ -55,6 +56,7 @@ import {styles } from '../styles/about';
                             </Typography>
                         </Box>  
                     </Box> 
+               
                     <Box sx={styles.boxOfferMd} >
                         <Box sx={styles.boxTitle} >
                             <Typography  variant='h4' sx={{ fontWeight:'290'}}>

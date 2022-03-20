@@ -36,14 +36,14 @@ export const styles = {
     } , 
 
     title:{
-            fontWeight:'290',
+            fontWeight:290,
             
         },
-    text:{
-            fontWeight:'350',  
+    text:{ 
+            fontWeight:350 ,
             width:'600px' , 
             lineHeight: '1.8 ' , 
-            letterSpacing:' 0.1em'
+            
         } , 
     
     
@@ -67,7 +67,7 @@ export const styles = {
 
         '& p':{
             textTransform:'capitalize'  ,
-            fontWeight:'300 !important' , 
+            fontWeight: 300  , 
             color:'#2f2d29' ,
             fontSize:' 1rem' ,  
             lineHeight:' 1.8'  ,  
@@ -79,26 +79,32 @@ export const styles = {
 
     boxOfferLg:{
         maxWidth:'1500px', 
-        maxHeight:'500px' , 
+        maxHeight:'600px' , 
         bgcolor:'#eae1dc' , 
         display:'flex' , 
-        alignItems:'center' , 
-        justifyContent:'center' , 
-        py:'100px' 
+        alignItems:'start' , 
+        justifyContent:'center' ,  
+        mb:'70px' 
     } , 
 
     boxOfferMd:{
-        py:'30px' ,
-        px:'30px'   , 
-        width:'400px' , 
-        height:'300px'   
+        maxWidth:'100%' , 
+        maxHeight:'100%'  , 
+        display:'flex', 
+        flexDirection:'column' , 
+        alignItems:'center', 
+        justifyContent:'center', 
+        pt:'150px',
+        pb:'50px',
+        px:'20px'
+       
     } , 
 
     boxTitle:{
         display:'flex' , 
         alignItems:'center' , 
         justifyContent:'center' , 
-        '&.MuiTypohraphy-h4':{
+        '&.MuiTypography-h4':{
             display:'flex' ,  
             alignItems:'center' , 
             justifyContent:'center' , 

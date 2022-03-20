@@ -7,24 +7,52 @@ export const theme = createTheme({
             main :'#dbcfc9'
         },
         secondary:{
-            main :'#FBFCF8'
+            main :'#ebe2dd'
         },
-        error:{
-            main :'#8d877c'
+        
+        third:{
+            main :'#f7f4f2'
         },
-        warning:{
-            main :'#d4cbb9'
+         text:{
+            main :'#2f2d29'
         },
-         success:{
-            main :'#bcb4a5'
+    } ,
+     typography:{
+        fontFamily:"Roboto" , 
+        h2:{
+            textTransform:'capitalize',
+            fontSize:"1.1rem" ,
+            fontWeight:300,
+            
+        }, 
+        h4:{
+            fontSize:'2.1rem',
+            fontWeight:250, 
         },
-        overrides:{
-            MuiButton:{
-                text:{
-                    color: '#2f2d29'
-                }
+        h5:{
+            fontSize:'2.1rem',
+            
+            
+        }, 
+        h6:{
+            
+            fontWeight:0,
+        },
+    } , shape:{
+        borderRadius: 0 , 
+    } , 
+    spacing: 10 , 
+    overrides:{
+        MuiButton:{
+          root:{
+            bgcolor:'green',
+            disableRipple : true,
+            color:"text" , 
+             
+            },
+            '&:hover':{
+              bgcolor:"third"
             }
         }
-        
     }
 })

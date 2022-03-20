@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/nav/Nav';
-import Fotter from './components/footer/Footer';
+import Footer from './components/footer/Footer';
 import Home from './pages/Home';
 import Kitchen from './pages/Kitchen';
 import Wardrobe from './pages/Wardrobe';
@@ -19,11 +19,8 @@ import Bathroom from './pages/Bathroom';
 function App() {
   return (
     <div style={{overflow:' hidden' , position:'relative'}} >
-      
-        <Navbar/>
-      
-      
-      <BasicContainer maxWidth='false'  height= "100vh" width='80vh'  sx={{overflow:' hidden' , position:'relativ'}} >
+       <Navbar/>
+       <BasicContainer maxWidth='false'  height= "100vh" width='80vh'  sx={{overflow:' hidden' , position:'relative'}} >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="kitchen" element={<Kitchen/>} />
@@ -35,7 +32,7 @@ function App() {
           
         </Routes>
       </BasicContainer>
-      <Fotter/>
+      <Footer/>
       
      
       

@@ -11,7 +11,7 @@ export const styles = {
         overflowY:'hidden',
         position:'absolute' , 
         bottom:'0' , 
-        left:'0'
+        left:'0', 
       } , 
       sectionBoxMd1:{
         maxHeight:'350px' ,  
@@ -20,7 +20,8 @@ export const styles = {
         flexDirection:'row', 
         alignItems:'center' , 
         justifyContent:'center', 
-        pl:'210px'
+        pl:'210px', 
+        
       } ,
 
       sectionBoxMd2:{

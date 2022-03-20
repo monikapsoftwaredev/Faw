@@ -23,11 +23,10 @@
     headerTextBox:{
       maxHeight:"522px", 
       px:'20px'  , 
-      mx:'90px' , 
+      mx:'90px' ,  
       '&.MuiTypography-4':{
         width:'320px' , 
-        height:'300px' ,
-        lineHeight:'1.8' ,  
+        height:'300px' , 
         display:'flex' , 
         alignItems:'center' , 
         justifyContent:'center',
@@ -75,10 +74,10 @@
 
 
     mediaButton:{
-      bgcolor:'#dbcfc9', 
+      bgcolor:'#dbcfc9',
       opacity:' 0.8',
       px:'40px' ,   
-      borderRadius:'0' ,
+       borderRadius:0 ,
       '&:hover':{
         bgcolor:'#f7f4f2', 
         opacity:' 0.7'
@@ -91,30 +90,43 @@
       color:'#2f2d29'   
     } ,
 
-    sectionTwoBoxLg:{
-      maxHeight:'900px' , 
-      width:'100%' ,
-      pt:'50px' ,   
-      bgcolor:"#ebe2dd"   
+    sectionTwoBoxLg:{ 
+      maxHeight:'1200px',
+      bgcolor:"#ebe2dd" ,
+      width:'100%' , 
+      display:'flex' , 
+      flexDirection:"column" ,
+      alignItems:'center' , 
+      justifyContent:'center' , 
+      py:'50px'   
     } ,
 
     sectionTwoBoxMd:{
-      maxHeight:'200px' , 
+      maxHeight:'300px' , 
       width:'auto'  , 
       display:'flex' , 
       alignItems:'center' , 
       justifyContent:'center',
+      pt:'50px',
       '&.MuiTypography-h4':{  
         width:'800px'  , 
-        py:'30px' 
+        py:'60px',
+
       }
     },
+
     sectionTwoPhotoContainerLg:{
+      maxHeight:'900px' , 
+      width:'100%'  , 
       display:'flex' , 
       alignItems:'center' , 
       justifyContent:'space-evenly' , 
-      py:'90px'   
+      py:'60px' 
     } ,
+  
+
+    
+   
 
     sectionTwoPhotoContainerMd:{
       px:'50px' , 
@@ -152,7 +164,7 @@
       zIndex:'10' , 
       '&.MuiTypography-6':{ 
         width:'160', 
-        color:'#2f2d29'  , 
+        color:'#2f2d29'  ,
         py:'5px', 
         mx:'auto' ,
         fontSize:' 1rem' ,  
@@ -186,9 +198,10 @@
       '&.MuiTypography-h4':{
         fontWeight:'290'
       } ,
-      '&.MuiTypography-body1':{
+      '& p':{
         fontWeight:'300',  
-        width:'400px'
+        width:'400px',
+        lineHeight: '1.8 ' ,
       } , 
     }, 
 
@@ -223,11 +236,12 @@
     sectionFourBoxLg:{
       maxHeight:'900px', 
       width:'100%' , 
-      py:'10px' , 
+      py:'40px' , 
       bgcolor:'#ebe2dd'   , 
       display:'flex' , 
       alignItems:'center' , 
-      justifyContent:'space-evenly'
+      justifyContent:'space-evenly', 
+      pb:'120px'
     } ,
 
     sectionFourBoxMd:{
@@ -244,11 +258,11 @@
       flexDirection:'column' ,  
       alignItems:'center' , 
       justifyContent:'center' , 
-      mb:'20px'
+      mb:'30px'
     }, 
 
     sectionFourIcon:{
-      fontSize:'65px' , 
+      fontSize:'95px' , 
       fontWeight:'200' ,  
       color:'#787774', 
       pb:'30px'
@@ -273,14 +287,14 @@
      '&.MuiTypography-h5':{
        textTransform:'capitalize' , 
        color:'#2f2d29' , 
-       fontWeight:'250', 
+      
        px:'30px' , 
        py:'5px',
       },
      '&.MuiTypography-h6':{
       textTransform:'capitalize' , 
       color:'#2f2d29' , 
-      fontWeight:'300', 
+      
       px:'30px' , 
       py:'5px' , 
       mx:'auto'
