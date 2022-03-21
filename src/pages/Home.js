@@ -59,7 +59,7 @@ const Home = () => {
                             <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
                         
                             <Box sx={styles.mediaBox}>
-                                <Button variant="contained" disableRipple={true} sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
+                                <Button variant="contained" sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
                                         <Typography variant='h2' sx={styles.text}> 
                                             Kitchen
                                         </Typography>
@@ -77,7 +77,7 @@ const Home = () => {
                             <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wardrobe.jpg" />
 
                             <Box sx={styles.mediaBox }>
-                                <Button variant="contained"  disableRipple={true} sx={styles.mediaButton} onClick={()=>navigate('wardrobe')} >
+                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=>navigate('wardrobe')} >
                                 <Typography variant='h2' sx={styles.text} > 
                                     Wardrobe
                                 </Typography>
@@ -95,7 +95,7 @@ const Home = () => {
                             <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/bath.jpg"/ >
 
                             <Box sx={styles.mediaBox}>
-                                <Button variant="contained"  disableRipple={true}   sx={styles.mediaButton} onClick={()=>navigate('bathroom')}>
+                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=>navigate('bathroom')}>
                                 <Typography variant='h2' sx={styles.text} > 
                                     Bathroom
                                 </Typography>
@@ -199,7 +199,7 @@ const Home = () => {
                             </Typography>
                         </Box>
                         <Box sx={styles.sectionTreeButtonBox}>
-                                <Button variant="contained" disableRipple= {true}  sx={styles.buttonText} onClick={()=> console.log('clicked')} >
+                                <Button variant="contained" sx={styles.buttonText} onClick={()=> console.log('clicked')} >
                                 <Typography component='div' variant='h2' sx={{ fontWeight:'300' , fontSize:'1rem'}}   > 
                                     More
                                 </Typography>

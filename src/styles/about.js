@@ -1,3 +1,5 @@
+import { theme } from "../Theme";
+
 export const styles = {
     boxLg:{
         maxHeight:'auto' ,   
@@ -38,13 +40,20 @@ export const styles = {
     title:{
             fontWeight:290,
             
-        },
+    },
     text:{ 
             fontWeight:350 ,
             width:'600px' , 
             lineHeight: '1.8 ' , 
             
-        } , 
+    } , 
+
+    buttonText:{ 
+        opacity:' 0.8' ,
+        px:theme.spacing(5) , 
+        
+    },
+
     
     
     buttonBox:{
@@ -52,28 +61,28 @@ export const styles = {
         width:'auto' , 
         height:'auto' , 
         display:'flex' , 
-        justifyContent:'flexStart', 
-       
-
+        justifyContent:'flexStart',
         '&.MuiButton-contained':{
-            bgcolor:'#dbcfc9', 
+            bgcolor:theme.palette.primary.main, 
             opacity:' 0.8' ,
             px:'50px' , 
             borderRadius:'0', 
             weight:'100px',
             height:'auto' ,
-           
-        } , 
-
-        '& p':{
-            textTransform:'capitalize'  ,
-            fontWeight: 300  , 
-            color:'#2f2d29' ,
-            fontSize:' 1rem' ,  
-            lineHeight:' 1.8'  ,  
-            width:'160',
-           
-        }
+            '&:hover':{
+                bgcolor:theme.palette.third.main
+            }
+        
+        }, 
+         '& p':{
+                textTransform:'capitalize'  ,
+                fontWeight: 300  , 
+                color:'#2f2d29' ,
+                fontSize:' 1rem' ,  
+                lineHeight:' 1.8'  ,  
+                width:'160',
+            
+            }
     } , 
 
 

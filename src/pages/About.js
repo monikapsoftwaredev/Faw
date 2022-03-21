@@ -32,8 +32,8 @@ import {styles } from '../styles/about';
                             </Typography>
                         </Box>
                         <Box sx={ styles.buttonBox}>
-                                <Button variant="contained" disableRipple= {true} sx={ styles.buttonBox} onClick={()=> console.log('clicked')} >
-                                <Typography variant='h2' > 
+                        <Button variant='contained'  sx={styles.buttonBox} onClick={()=> console.log('clicked')} >
+                                <Typography component='div' variant='h2' sx={{ fontWeight:'300' , fontSize:'1rem'}}   > 
                                     More
                                 </Typography>
                                 </Button>

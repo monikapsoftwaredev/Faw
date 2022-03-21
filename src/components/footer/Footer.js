@@ -60,7 +60,7 @@ const Fotter = () => {
                                             </Box>       
                                             
                                             <Box>
-                                                <Button variant="text" sx={{bgcolor:'transparent' , borderRadius:'0'}} onClick={()=> console.log('M&P Webdesign & Development')} >
+                                                <Button variant="text" sx={{bgcolor:'transparent' , borderRadius:'0'}} onClick={()=> console.log('M&D Webdesign & Development')} >
                                                     <Typography varient='h2' sx={{ textTransform:'capitalize'  ,fontWeight:'400' ,   color:'#787774' ,fontSize:' 1rem' ,  lineHeight:' 1.5'}} > 
                                                     M&P Webdesign & Development
                                                     </Typography>
