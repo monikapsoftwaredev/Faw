@@ -1,10 +1,12 @@
 import * as React from "react";
+import { theme } from "../Theme";
 import { useNavigate } from "react-router-dom";
 import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/material";
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CommonCard from '../components/CommonCard/CommonCard';
+import CommonCardSm from '../components/CommonCard/CommonCardSm';
 import CommonText from "../components/CommonText/CommonText";
 import CommonButton  from '../components/CommonButton/CommonButton';
 import{ styles} from '../styles/home'
@@ -27,7 +29,40 @@ const Home = () => {
         maxHeight:'488px',
         
     }
-  
+    const cardStyles = {
+        bgcolor:'yellow',
+        maxWidth:theme.spacing(31),  
+        mx:'auto' ,  
+      
+    }
+
+    const mediaboxStyles = {
+        bgcolor:'green',  
+        position:'absolute' ,  
+        bottom:'0', 
+        right:'0', 
+        zIndex:theme.spacing(10), 
+        width:'100%' , 
+        height:'30%' ,                                        
+        display:'flex' , 
+        justifyContent:'center' , 
+        alignItems:'center' 
+    }
+    
+
+    const mediaboxS = {
+        bgcolor:'transparent',  
+        position:'absolute' ,  
+        bottom:'0', 
+        right:'0', 
+        zIndex:theme.spacing(10), 
+        width:'100%' , 
+        height:'50%' ,                                        
+        display:'flex' , 
+        justifyContent:'center' , 
+        alignItems:'center' , 
+        my:theme.spacing(1) , 
+    }
 
     const navigate = useNavigate(); 
 
@@ -68,20 +103,26 @@ const Home = () => {
                 <Box   sx={styles.sectionOneBoxLg}>
                     <Box   sx={styles.sectionOneBoxMd}>
 
-                        <Card sx={styles.card}>
-                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg" / >
-                        
-                            <Box sx={styles.mediaBox}>
-                                <Button variant="contained" sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
-                                        <Typography variant='h2' sx={styles.text}> 
-                                            Kitchen
-                                        </Typography>
+                        <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/kitchen1.jpg"  sx={cardStyles}/>
+                           
+                        {/* <Box sx={styles.mediaBox}>
+                                <Button variant="contained" sx={mediaboxStyles}  onClick={()=> navigate('kitchen')} >
+                                    <CommonText titel='Kitchen' variant='h2' component='div' sx={styles.text}/> 
+                                          
                                 </Button>
-                            </Box>
+                        </Box>   */}
+
+                        <Box sx={mediaboxS}>
+                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('kitchen')} >
+                                    <CommonText titel='Kitchen' variant='h2' component='div' sx={styles.text}/> 
+                                          
+                                </Button>
+                        </Box>  
 
 
+                      
                         
-                        </Card>
+                        
 
                     </Box>
                     <Box sx={styles.sectionOneBoxMd}>

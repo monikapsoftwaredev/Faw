@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
 
- function CommonCard ({height , image , alt ,component , sx}){
+ function CommonCard ({ height , image , alt ,component , sx}){
   return (
          <Card>
             <CardMedia
@@ -13,6 +13,7 @@ import CardMedia from '@mui/material/CardMedia';
             alt={alt}
             sx={sx} 
             />
+           
         </Card>
   );
 }

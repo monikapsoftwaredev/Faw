@@ -50,7 +50,9 @@ import { theme } from "../Theme";
        
       maxHeight:theme.spacing(90) , 
       width:'auto' ,
-      py:theme.spacing(9)
+      py:theme.spacing(9),
+      position:'relative'
+
     } ,
     card:{
       bgcolor:theme.palette.primary.main ,
@@ -61,16 +63,17 @@ import { theme } from "../Theme";
     } ,
 
     mediaBox:{
-      bgcolor:'transparent',  
-      position:'absolute' ,  
-      bottom:'0', 
-      right:'0', 
-      zIndex:theme.spacing(10), 
-      width:'100%' , 
-      height:'30%' ,                                        
-      display:'flex' , 
-      justifyContent:'center' , 
-      alignItems:'center' 
+        bgcolor:'transparent',  
+        position:'absolute' ,  
+        bottom:'0', 
+        right:'0', 
+        zIndex:theme.spacing(10), 
+        width:'100%' , 
+        height:'50%' ,                                        
+        display:'flex' , 
+        justifyContent:'center' , 
+        alignItems:'center' , 
+        
     } ,
 
 
@@ -78,7 +81,7 @@ import { theme } from "../Theme";
       bgcolor:theme.palette.primary.main,
       opacity:' 0.8',
       px:theme.spacing(4) ,   
-       borderRadius:0 ,
+      borderRadius:0 ,
       '&:hover':{
         bgcolor:theme.palette.third.main, 
         opacity:' 0.7'
@@ -88,7 +91,8 @@ import { theme } from "../Theme";
     text:{
       textTransform:'capitalize' ,
       px:'30px' ,
-      color:theme.palette.text.main
+      color:theme.palette.text.main , 
+      
     } ,
 
     sectionTwoBoxLg:{ 
