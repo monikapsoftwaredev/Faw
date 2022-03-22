@@ -77,6 +77,14 @@ export const theme = createTheme({
             }
           },
         },
+        MuiCard:{
+          styleOverrides:{
+            root:{
+              borderRadius: 0 ,
+            }
+          }
+        }
+
     },
     
    

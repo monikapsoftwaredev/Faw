@@ -4,7 +4,7 @@ import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/ma
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import CommonCard from '../components/CommonCard/CommonCard';
+
 import CommonText from "../components/CommonText/CommonText";
 import CommonButton  from '../components/CommonButton/CommonButton';
 import{ styles} from '../styles/home'
@@ -19,17 +19,18 @@ import{ styles} from '../styles/home'
   
 
 
-const Home = () => {
-
-    const buttonStyles = {
-        
-        maxWidth:'800px',
-        maxHeight:'488px',
-        
-    }
+const Homee = () => {
   
 
     const navigate = useNavigate(); 
+
+    const buttonStyles = {
+        
+             maxWidth:'800px',
+             maxHeight:'488px',
+             paddingLeft:'80px'
+           
+    }
 
 
   return ( 
@@ -38,29 +39,28 @@ const Home = () => {
                 {/* Header section */ }
 
                 <Box sx={styles.headerBoxLg}> 
-                    <Box sx={styles.headerBoxMd}>
-                            {/* <Card>
-                                <CardMedia
-                                component='img' 
-                                sx={{maxHeight:'488px' , maxWidth:'800px', paddingLeft:'80px'    }} 
-                                alt="kitchen"
-                                image="../assets/mainContentPhotos/kitchen3.jpg" 
-                                />
-                            </Card>
-                         */}
-                           
-                               <CommonCard 
-                                component='img' 
-                                sx={buttonStyles} 
-                                alt="kitchen"
-                                image="../assets/mainContentPhotos/kitchen3.jpg" 
-                                /> 
-                            
+                        <Box sx={styles.headerBoxMd}>
+                        <Card sx={styles.card}>
+                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
+                        
+                            <Box sx={styles.mediaBox}>
+                                <Button variant="contained" sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
+                                        <Typography variant='h2' sx={styles.text}> 
+                                            Kitchen
+                                        </Typography>
+                                </Button>
+                            </Box>
 
-                                <Box sx={styles.headerTextBox}> 
-                                   <CommonText titel='We will design your kitchen' variant='h4' component='div'/>
-                                </Box>
-                    </Box>
+
+                        
+                        </Card> 
+                            
+                            <Box sx={styles.headerTextBox}> 
+                                   <CommonText titel='We will design your kitchen !!!!!!!!!!! ' variant='h4' component='div'/>
+                            </Box>
+
+                        </Box>
+
                 </Box>
 
                 {/*  Services presentation , section1  */ }
@@ -69,7 +69,7 @@ const Home = () => {
                     <Box   sx={styles.sectionOneBoxMd}>
 
                         <Card sx={styles.card}>
-                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg" / >
+                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/kitchen1.jpg"/ >
                         
                             <Box sx={styles.mediaBox}>
                                 <Button variant="contained" sx={styles.mediaButton}  onClick={()=> navigate('kitchen')} >
@@ -321,7 +321,7 @@ const Home = () => {
      );
 }
  
-export default Home ;
+export default Homee ;
 
 
 
