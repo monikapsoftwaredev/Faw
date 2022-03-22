@@ -101,68 +101,43 @@ const Home = () => {
                 {/*  Services presentation , section1  */ }
 
                 <Box   sx={styles.sectionOneBoxLg}>
+
                     <Box   sx={styles.sectionOneBoxMd}>
-
                         <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/kitchen1.jpg"  sx={cardStyles}/>
-                           
-                        {/* <Box sx={styles.mediaBox}>
-                                <Button variant="contained" sx={mediaboxStyles}  onClick={()=> navigate('kitchen')} >
-                                    <CommonText titel='Kitchen' variant='h2' component='div' sx={styles.text}/> 
-                                          
-                                </Button>
-                        </Box>   */}
-
                         <Box sx={mediaboxS}>
                                 <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('kitchen')} >
                                     <CommonText titel='Kitchen' variant='h2' component='div' sx={styles.text}/> 
                                           
                                 </Button>
                         </Box>  
-
-
-                      
-                        
-                        
+                           
 
                     </Box>
-                    <Box sx={styles.sectionOneBoxMd}>
 
-                        <Card sx={styles.card}>
-                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/wardrobe.jpg" />
-
-                            <Box sx={styles.mediaBox }>
-                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=>navigate('wardrobe')} >
-                                <Typography variant='h2' sx={styles.text} > 
-                                    Wardrobe
-                                </Typography>
+                    <Box   sx={styles.sectionOneBoxMd}>
+                        <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/wardrobe.jpg"  sx={cardStyles}/>
+                        <Box sx={mediaboxS}>
+                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('wardrobe')} >
+                                    <CommonText titel='Wardrobe' variant='h2' component='div' sx={styles.text}/> 
+                                          
                                 </Button>
-                            </Box>
-
-
-
-                        </Card>
+                        </Box>  
+                           
 
                     </Box>
-                    <Box sx={styles.sectionOneBoxMd}>
 
-                        <Card sx={styles.card}>
-                            <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/bath.jpg"/ >
-
-                            <Box sx={styles.mediaBox}>
-                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=>navigate('bathroom')}>
-                                <Typography variant='h2' sx={styles.text} > 
-                                    Bathroom
-                                </Typography>
+                    <Box   sx={styles.sectionOneBoxMd}>
+                        <CommonCardSm  component="img" height="300px"   image="../assets/mainContentPhotos/bath.jpg"  sx={cardStyles}/>
+                        <Box sx={mediaboxS}>
+                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('bathroom')} >
+                                    <CommonText titel='Bathroom' variant='h2' component='div' sx={styles.text}/> 
+                                          
                                 </Button>
-                            </Box>
+                        </Box>  
+                           
 
-                                                                                
-
-                        </Card>                  
-        
-
-
-                </Box>
+                    </Box>
+                    
                 </Box>
 
                 {/* Service process creation section*/ }
@@ -174,58 +149,98 @@ const Home = () => {
                     </Box>
 
                     <Box sx={styles.sectionTwoPhotoContainerLg} >
-                        <Box sx={styles.sectionOneBoxMd}>
 
-                            <Card sx={styles.card}>
-                                <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/design6.jpg"/ >
-                            
-                                <Box sx={styles.mediaBox}>
-                                    <Button variant="contained"  disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
-                                            <Typography variant='h2' sx={styles.text}> 
-                                                Design Kitchen
-                                            </Typography>
+                        <Box   sx={styles.sectionOneBoxMd}>
+                            <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/design6.jpg" sx={cardStyles}/>
+                            <Box sx={mediaboxS}>
+                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                        <CommonText titel='Design Kitchen' variant='h2' component='div' sx={styles.text}/> 
+                                            
                                     </Button>
-                                </Box>
-
-
+                            </Box>  
                             
-                            </Card>
 
                         </Box>
-                        <Box sx={styles.sectionOneBoxMd}>
 
-                            <Card sx={styles.card}>
-                                <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/hand.jpg" />
 
-                                <Box sx={styles.mediaBox }>
-                                    <Button variant="contained"   disable='true' sx={styles.mediaButton} onClick={()=>('#')} >
-                                    <Typography variant='h2' sx={styles.text} > 
-                                        Signing Contract
-                                    </Typography>
+                        <Box   sx={styles.sectionOneBoxMd}>
+                            <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/hand.jpg" sx={cardStyles}/>
+                            <Box sx={mediaboxS}>
+                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                        <CommonText titel='Signing Contract' variant='h2' component='div' sx={styles.text}/> 
+                                            
                                     </Button>
-                                </Box>
-
-
-
-                            </Card>
+                            </Box>  
+                            
 
                         </Box>
-                        <Box sx={styles.sectionOneBoxMd}>
 
-                            <Card sx={styles.card}>
-                                <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/assemb6.jpg"/ >
 
-                                <Box sx={styles.mediaBox}>
-                                    <Button variant="contained"  disable='true' sx={styles.mediaButton} onClick={()=>navigate('#')}>
-                                    <Typography variant='h2' sx={styles.text} > 
-                                        Your Kitchen
-                                    </Typography>
+                        <Box   sx={styles.sectionOneBoxMd}>
+                            <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/design6.jpg" sx={cardStyles}/>
+                            <Box sx={mediaboxS}>
+                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                        <CommonText titel=' Your Kitchen ' variant='h2' component='div' sx={styles.text}/> 
+
+                                            
                                     </Button>
-                                </Box>
+                            </Box>  
+                            
 
-                            </Card>  
-                    
-                    </Box>
+                        </Box>
+
+                            {/* <Box sx={styles.sectionOneBoxMd}>
+
+                                <Card sx={styles.card}>
+                                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/design6.jpg"/ >
+                                
+                                    <Box sx={styles.mediaBox}>
+                                        <Button variant="contained" ' disable='true sx={styles.mediaButton} onClick={()=> ('#')} >
+                                                <Typography variant='h2' sx={styles.text}> 
+                                                    Design Kitchen
+                                                </Typography>
+                                        </Button>
+                                    </Box>
+
+
+                                
+                                </Card>
+
+                            </Box> */}
+                            {/* <Box sx={styles.sectionOneBoxMd}>
+
+                                <Card sx={styles.card}>
+                                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/hand.jpg" image="../assets/mainContentPhotos/design6.jpg" />
+
+                                    <Box sx={styles.mediaBox }>
+                                        <Button variant="contained"   disable='true' sx={styles.mediaButton} onClick={()=>('#')} >
+                                        <Typography variant='h2' sx={styles.text} > 
+                                            Signing Contract
+                                        </Typography>
+                                        </Button>
+                                    </Box>
+
+
+
+                                </Card>
+
+                            </Box>
+                            <Box sx={styles.sectionOneBoxMd}>
+
+                                <Card sx={styles.card}>
+                                    <CardMedia component="img" height="300px" image="../assets/mainContentPhotos/assemb6.jpg"/ >
+
+                                    <Box sx={styles.mediaBox}>
+                                        <Button variant="contained"  disable='true' sx={styles.mediaButton} onClick={()=>navigate('#')}>
+                                        <Typography variant='h2' sx={styles.text} > 
+                                            Your Kitchen
+                                        </Typography>
+                                        </Button>
+                                    </Box>
+
+                                </Card>  
+                        
+                        </Box> */}
                     </Box>
                 </Box>
 
