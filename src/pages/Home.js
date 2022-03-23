@@ -1,7 +1,7 @@
 import * as React from "react";
 import { theme } from "../Theme";
 import { useNavigate } from "react-router-dom";
-import {  Container , Typography , Button , Box ,Card ,CardMedia } from "@mui/material";
+import {  Container , Typography , Box } from "@mui/material";
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -10,6 +10,7 @@ import CommonCardSm from '../components/CommonCard/CommonCardSm';
 import CommonText from "../components/CommonText/CommonText";
 import CommonButton  from '../components/CommonButton/CommonButton';
 import{ styles} from '../styles/home'
+import { bgcolor } from "@mui/system";
 
 
 
@@ -36,18 +37,7 @@ const Home = () => {
       
     }
 
-    const mediaboxStyles = {
-        bgcolor:'green',  
-        position:'absolute' ,  
-        bottom:'0', 
-        right:'0', 
-        zIndex:theme.spacing(10), 
-        width:'100%' , 
-        height:'30%' ,                                        
-        display:'flex' , 
-        justifyContent:'center' , 
-        alignItems:'center' 
-    }
+   
     
 
     const mediaboxS = {
@@ -74,29 +64,22 @@ const Home = () => {
 
                 <Box sx={styles.headerBoxLg}> 
                     <Box sx={styles.headerBoxMd}>
-                            {/* <Card>
-                                <CardMedia
-                                component='img' 
-                                sx={{maxHeight:'488px' , maxWidth:'800px', paddingLeft:'80px'    }} 
-                                alt="kitchen"
-                                image="../assets/mainContentPhotos/kitchen3.jpg" 
-                                />
-                            </Card>
-                         */}
-                           
-                               <CommonCard 
-                                component='img' 
-                                sx={buttonStyles} 
-                                alt="kitchen"
-                                image="../assets/mainContentPhotos/kitchen3.jpg" 
-                                /> 
-                            
 
-                                <Box sx={styles.headerTextBox}> 
-                                   <CommonText titel='We will design your kitchen' variant='h4' component='div'/>
-                                </Box>
+                        <CommonCard 
+                        component='img' 
+                        sx={buttonStyles} 
+                        alt="kitchen"
+                        image="../assets/mainContentPhotos/kitchen3.jpg" 
+                        /> 
+                    
+
+                        <Box sx={styles.headerTextBox}> 
+                            <CommonText titel='We will design your kitchen' variant='h4' component='div'/>
+                        </Box>
+
                     </Box>
                 </Box>
+
 
                 {/*  Services presentation , section1  */ }
 
@@ -105,22 +88,22 @@ const Home = () => {
                     <Box   sx={styles.sectionOneBoxMd}>
                         <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/kitchen1.jpg"  sx={cardStyles}/>
                         <Box sx={mediaboxS}>
-                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('kitchen')} >
+                                <CommonButton variant="contained" size='medium' sx={styles.mediaButton} onClick={()=> navigate('kitchen')} >
                                     <CommonText titel='Kitchen' variant='h2' component='div' sx={styles.text}/> 
                                           
-                                </Button>
+                                </CommonButton>
                         </Box>  
                            
-
+                      
                     </Box>
 
                     <Box   sx={styles.sectionOneBoxMd}>
                         <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/wardrobe.jpg"  sx={cardStyles}/>
                         <Box sx={mediaboxS}>
-                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('wardrobe')} >
+                                <CommonButton variant="contained"   size='medium'  sx={styles.mediaButton} onClick={()=> navigate('wardrobe')} >
                                     <CommonText titel='Wardrobe' variant='h2' component='div' sx={styles.text}/> 
                                           
-                                </Button>
+                                </CommonButton>
                         </Box>  
                            
 
@@ -129,10 +112,10 @@ const Home = () => {
                     <Box   sx={styles.sectionOneBoxMd}>
                         <CommonCardSm  component="img" height="300px"   image="../assets/mainContentPhotos/bath.jpg"  sx={cardStyles}/>
                         <Box sx={mediaboxS}>
-                                <Button variant="contained"  sx={styles.mediaButton} onClick={()=> navigate('bathroom')} >
+                                <CommonButton variant="contained"  size='medium'  sx={styles.mediaButton} onClick={()=> navigate('bathroom')} >
                                     <CommonText titel='Bathroom' variant='h2' component='div' sx={styles.text}/> 
                                           
-                                </Button>
+                                </CommonButton>
                         </Box>  
                            
 
@@ -153,10 +136,10 @@ const Home = () => {
                         <Box   sx={styles.sectionOneBoxMd}>
                             <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/design6.jpg" sx={cardStyles}/>
                             <Box sx={mediaboxS}>
-                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                    <CommonButton variant="contained"size="medium" sx={styles.mediaButton} onClick={()=> ('#')} >
                                         <CommonText titel='Design Kitchen' variant='h2' component='div' sx={styles.text}/> 
                                             
-                                    </Button>
+                                    </CommonButton>
                             </Box>  
                             
 
@@ -166,10 +149,10 @@ const Home = () => {
                         <Box   sx={styles.sectionOneBoxMd}>
                             <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/hand.jpg" sx={cardStyles}/>
                             <Box sx={mediaboxS}>
-                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                    <CommonButton variant="contained"size="medium" sx={styles.mediaButton} onClick={()=> ('#')} >
                                         <CommonText titel='Signing Contract' variant='h2' component='div' sx={styles.text}/> 
                                             
-                                    </Button>
+                                    </CommonButton>
                             </Box>  
                             
 
@@ -179,11 +162,11 @@ const Home = () => {
                         <Box   sx={styles.sectionOneBoxMd}>
                             <CommonCardSm  component="img" height="300px"  image="../assets/mainContentPhotos/design6.jpg" sx={cardStyles}/>
                             <Box sx={mediaboxS}>
-                                    <Button variant="contained" disable='true' sx={styles.mediaButton} onClick={()=> ('#')} >
+                                    <CommonButton variant="contained" size="medium" sx={styles.mediaButton} onClick={()=> ('#')} >
                                         <CommonText titel=' Your Kitchen ' variant='h2' component='div' sx={styles.text}/> 
 
                                             
-                                    </Button>
+                                    </CommonButton>
                             </Box>  
                             
 
@@ -249,30 +232,41 @@ const Home = () => {
 
                 <Box   sx={styles.sectionTreeBoxLg}>
                     <Box sx={styles.sectionTreeBoxMd}>
-
+                      {/* 
                         <Card sx={styles.sectionTreeCard}>
                             <CardMedia component="img" height="510px" image="../assets/mainContentPhotos/advice.jpg"/ >
                         
-                        </Card>
+                        </Card> */}
+
+                        <CommonCard component="img" height="510px" image="../assets/mainContentPhotos/advice.jpg" sx={styles.sectionTreeCard}/>
 
                     </Box>
                     <Box sx={styles.sectionTreeTextBox}>
                         <Box sx={{py:'30px'}} >
-                            <Typography  variant='h4' sx={{ fontWeight:'290'  }}>
+                            {/* <Typography  variant='h4' sx={{ fontWeight:'290'  }}>
                                Unique and Quality made Furniture
-                            </Typography>
+                            </Typography> */}
+                            <CommonText titel='Unique and Quality made Furniture'  variant='h4'  sx={{ fontWeight:'290'  }}  />
                         </Box>
                         <Box sx={{pb:'30px' , pt:'10px'}}>
-                            <Typography variant='body1' sx={{ fontWeight:'300',  width:'500px' }}>
+                            {/* <Typography variant='body1' sx={{ fontWeight:'300',  width:'500px' }}>
                             We create unique kitchen furniture tailored to your needs. We offer our clients a comprehensive service, which includes furniture design, measurement, execution and professional assembly.
-                            </Typography>
+                            </Typography> */}
+                             <CommonText titel='We create unique kitchen furniture tailored to your needs. We offer our clients a comprehensive service, which includes furniture design, measurement, execution and professional assembly.'  variant='body1'  sx={{ fontWeight:'300',  width:'500px' }} />
+
                         </Box>
                         <Box sx={styles.sectionTreeButtonBox}>
-                                <Button variant="contained" sx={styles.buttonText} onClick={()=> console.log('clicked')} >
+                                {/* <Button variant="contained" sx={styles.buttonText} onClick={()=> console.log('clicked')} >
                                 <Typography component='div' variant='h2' sx={{ fontWeight:'300' , fontSize:'1rem'}}   > 
                                     More
                                 </Typography>
-                                </Button>
+                                </Button> */}
+                               <CommonButton variant="contained" sx={styles.buttonText} onClick={()=> console.log('clicked')} >
+                                    <CommonText titel='More' component='div' variant='h2' sx={{ fontWeight:'300' , fontSize:'1rem'}} /> 
+                                    
+                              </CommonButton>
+
+
                         </Box>
                     </Box>
                     
@@ -287,91 +281,83 @@ const Home = () => {
                             <Box sx={styles.sectionFourIconBox}>
                                 <PhoneOutlinedIcon  sx={styles.sectionFourIcon} />
                                 <Box sx={styles.sectionFourTextBox}>
-                                    <Typography variant='h4' sx={{ fontWeight:'350'}} >
-                                    Phone
-                                    </Typography>
+                                    <CommonText titel='Phone' variant='h4' sx={{ fontWeight:'350'}} />
+                                </Box>
                             </Box>
-                                
-                            </Box>     
-                        
                             <Box sx={styles.sectionFourInfoBox} >
                                 <Box>
-                                        <Typography  variant='h5'sx={{ fontWeight:'200' }}  >
-                                        Faw office 
-                                        </Typography>
+                                    <CommonText titel='Faw Office' variant='h5'sx={{ fontWeight:'200' }} />
                                 </Box> 
+                                        
                                 <Box  sx={{ mx:'auto' , pl:'7px' }}>  
-                                        <Typography  variant='h6' sx={{ fontWeight:'200' }} >
-                                        966xxxxxx
-                                        </Typography>
+                                    <CommonText titel='966xxxxxx' variant='h6' sx={{ fontWeight:'200' }} />
                                 </Box>
+                                       
                                 <Box  sx={{ mx:'auto' , pl:'7px'  }}> 
-                                        <Typography  variant='h6'sx={{ fontWeight:'200' }} >
-                                        456xxxxxx
-                                        </Typography>
+                                    <CommonText titel='456xxxxxx' variant='h6'sx={{ fontWeight:'200' }} />
                                 </Box>
                             </Box>
+                                 
                         </Box>
+                                   
+                                  
+                                
+                                        
+                                
 
                         {/* Contact section nr 2 */ }
                         <Box sx={styles.sectionFourBoxMd}>
-                        <Box sx={styles.sectionFourIconBox}>
-                                < LocationOnIcon sx={styles.sectionFourIcon} />
-                                <Box sx={styles.sectionFourTextBox} >
-                                        <Typography variant='h4' sx={{ fontWeight:'350'  }}>
-                                        Address
-                                        </Typography>
-                                </Box>
-                                
+                            <Box sx={styles.sectionFourIconBox}>
+                                    < LocationOnIcon sx={styles.sectionFourIcon} />
+                                    <Box sx={styles.sectionFourTextBox} >
+                                        <CommonText titel ='Address' variant='h4' sx={{ fontWeight:'350'  }}/>
+                                    </Box>
                             </Box> 
-                            <Box   sx={{display:'flex', flexDirection:'column'  }} >   
-                                <Box  sx={styles.sectionFourInfoBox}>
-                                        <Typography  variant='h5' sx={{ fontWeight:'200' }}>
-                                        Faw xxxxxxxxxxxxx
-                                        </Typography>
-                                </Box> 
-                                <Box  sx={{ mx:'auto' , pl:'7px' }}>
-                                        <Typography  variant='h6' sx={{ fontWeight:'200' }}>
-                                        Lillesxxxxxxx
-                                        </Typography>
-                                        <Typography  variant='h6' sx={{ fontWeight:'200' }}>
-                                        1914 xxxxxxxxx
-                                        </Typography>
-                                        <Typography  variant='h6' sx={{ fontWeight:'200'}}>
-                                        NOxxxxxxxxxxxxx
-                                        </Typography>
-                                </Box>
+                            <Box sx={{display:'flex', flexDirection:'column'  }} >   
+                                    <Box  sx={styles.sectionFourInfoBox}>
+                                        <Box>
+                                            <CommonText titel='Faw xxxxxxxxxxxxx' variant='h5' sx={{ fontWeight:'200' }}/>
+                                        </Box>
+                                        <Box  sx={{ mx:'auto' , pl:'7px' }}>
+                                            <CommonText titel='Lillesxxxxxxx' variant='h6' sx={{ fontWeight:'200' }}/>
+                                            <CommonText titel='1914 xxxxxxxxx' variant='h6' sx={{ fontWeight:'200' }}/>
+                                            <CommonText titel='NOxxxxxxxxxxxxx' variant='h6' sx={{ fontWeight:'200'}}/>
+                                        </Box>
+                                    </Box>
                             </Box>
-                            
                         </Box> 
+                                        
+                            
+                            
                     
                         {/* Contact section nr 3 */ }
                         <Box sx={styles.sectionFourBoxMd}>
-                            <Box  sx={styles.sectionFourIconBox}>
-                            <MailOutlineIcon  sx={styles.sectionFourIcon} />
+                            <Box sx={styles.sectionFourIconBox}>
+                                <MailOutlineIcon  sx={styles.sectionFourIcon} />
                                 <Box sx={styles.sectionFourTextBox}>
-                                    <Typography variant='h4' sx={{ fontWeight:'350'  }}>
-                                    Email
-                                    </Typography>
+                                    <CommonText titel='Email' variant='h4' sx={{ fontWeight:'350'  }}/>
                                 </Box>
-                                
                             </Box>     
-                            
-                            <Box sx={{display:'flex' ,flexDirection:'column'  }}>
+                            <Box sx={{display:'flex' ,flexDirection:'column'}}>
                                 <Box sx={styles.sectionFourInfoBox}>
-                                        <Typography  variant='h5' sx={{ fontWeight:'200'  }}>
-                                        Faw office 
-                                        </Typography>
+                                    <Box>
+                                      <CommonText titel='Faw office' variant='h5' sx={{ fontWeight:'200'}}/>
+                                    </Box>
+                                
+                                    <Box sx={{ mx:'auto' , pl:'7px' }}>
+                                        <CommonText titel='fawxxxxxxx@gmail.com'  variant='h6' sx={{ fontWeight:'200'  }} />
+                                    </Box>
                                 </Box> 
-                                <Box  sx={{ mx:'auto' , pl:'7px' }}>
-                                        <Typography  variant='h6'sx={{ fontWeight:'200'  }} >
-                                        fawxxxxxxx@gmail.com
-                                        </Typography>
-                                </Box>
                             </Box>
-
                         </Box>      
                     </Box>
+                                        
+                                
+                            
+                                    
+                                        
+                                
+
                     
             </Container>
      );

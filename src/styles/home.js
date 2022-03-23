@@ -80,8 +80,9 @@ import { theme } from "../Theme";
     mediaButton:{
       bgcolor:theme.palette.primary.main,
       opacity:' 0.8',
-      px:theme.spacing(4) ,   
+        
       borderRadius:0 ,
+      disableRipple:true ,  
       '&:hover':{
         bgcolor:theme.palette.third.main, 
         opacity:' 0.7'
@@ -90,7 +91,7 @@ import { theme } from "../Theme";
 
     text:{
       textTransform:'capitalize' ,
-      px:'30px' ,
+      px:'20px' ,
       color:theme.palette.text.main , 
       
     } ,
@@ -256,6 +257,7 @@ import { theme } from "../Theme";
       bgcolor:'#ebe2dd' , 
       px:'10px' ,  
       pt:'20px',
+      
     } , 
      
     sectionFourIconBox:{
@@ -288,7 +290,6 @@ import { theme } from "../Theme";
       flexDirection:'column' , 
       alignItems:'center' , 
       justifyContent:'center' , 
-      
      '&.MuiTypography-h5':{
        textTransform:'capitalize' , 
        color:'#2f2d29' , 
