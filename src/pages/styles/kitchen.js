@@ -1,7 +1,10 @@
+import { theme } from "../../Theme";
+
 export const styles ={
     boxLg :{
         maxHeight:'100%'  ,  
-        mt:'66px' ,py:'50px' ,   
+        mt:theme.spacing(7) ,
+        py:theme.spacing(5) ,   
         bgcolor:"white" , 
         display:'flex' , 
         flexWrap:'wrap' ,
@@ -9,7 +12,7 @@ export const styles ={
         justifyContent:'space-evenly' 
     },
     imageListBox :{
-        width:'1650px', 
+        width:theme.spacing(165), 
         height:'auto' 
     },
     textBox :{ 
@@ -22,8 +25,8 @@ export const styles ={
         py:'auto' , 
         '& span':{
             fontWeight:300 ,
-            width:'200px', 
-            height:'150px' , 
+            width:theme.spacing(20), 
+            height:theme.spacing(15) , 
             display:'flex' , 
             alignItems:'center'  , 
             justifyContent:'center',  

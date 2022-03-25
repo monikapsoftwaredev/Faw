@@ -1,19 +1,19 @@
 import * as React from 'react';
 import{ Box, Container , ImageList , ImageListItem , Typography} from '@mui/material';
 import { photoList }  from '../data/photoList';
-import {styles} from '../styles/kitchen'
+import{ styles} from '../pages/styles/kitchen';
 
 
-
+ //maxWidth='false' height= "100vh" width='70vh'
 
 
 
   const Kitchen = () => {
 
       return (
-        <Container maxWidth='false' height= "100vh" width='70vh' sx={styles.boxLg} >
+        <Container maxWidth='xl' sx={styles.boxLg} >
             <Box sx={styles.imageListBox}>
-              <ImageList variant="masonry" cols={3} gap={80}>
+              <ImageList variant="masonry" cols={3} gap={20}>
                 {photoList.map((p) => (
                   <ImageListItem key={p.img}>
                     <img

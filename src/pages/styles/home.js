@@ -1,4 +1,5 @@
-import { theme } from "../Theme";
+
+import { theme } from "../../Theme";
 
   export const styles = {
     headerBoxLg:{
@@ -199,14 +200,14 @@ import { theme } from "../Theme";
     } , 
 
     sectionTreeTextBox:{
-      maxHeight:'900px' , 
+      maxHeight:theme.spacing(90) , 
       width:'auto',  
       '&.MuiTypography-h4':{
         fontWeight:'290'
       } ,
       '& p':{
         fontWeight:'300',  
-        width:'400px',
+        width:theme.spacing(40),
         lineHeight: '1.8 ' ,
       } , 
     }, 
@@ -219,44 +220,44 @@ import { theme } from "../Theme";
       justifyContent:'flexStart'
     },
     buttonText:{
-        bgcolor:'#dbcfc9', 
+        bgcolor:theme.palette.primary.main, 
         opacity:' 0.8' ,
-        px:'50px' , 
+        px:theme.spacing(5) , 
         borderRadius:'0',
         textTransform:'capitalize',
         '&:hover':{
-          bgcolor:'#f7f4f2', 
+          bgcolor:theme.palette.third.main, 
           opacity:' 0.7'
         }
 
     }, 
 
     sectionTreeCard:{
-      maxWidth:'510px',  
-      bgcolor:"#eae1dc" , 
+      maxWidth:theme.spacing(51),  
+      bgcolor:theme.palette.fourth.main , 
       mx:'auto' ,
       borderRadius:'0' ,  
       position:'relative', 
 
     } ,
     sectionFourBoxLg:{
-      maxHeight:'900px', 
+      maxHeight:theme.spacing(90), 
       width:'100%' , 
-      py:'40px' , 
-      bgcolor:'#ebe2dd'   , 
+      py:theme.spacing(4) , 
+      bgcolor:theme.palette.secondary.main  , 
       display:'flex' , 
       alignItems:'center' , 
       justifyContent:'space-evenly', 
-      pb:'120px'
+      pb:theme.spacing(12)
     } ,
 
     sectionFourBoxMd:{
-      height:'410px' , 
-      width:'360px', 
-      my:'30px' ,  
-      bgcolor:'#ebe2dd' , 
-      px:'10px' ,  
-      pt:'20px',
+      height:theme.spacing(41) , 
+      width:theme.spacing(36), 
+      my:theme.spacing(3) ,  
+      bgcolor:'transparent' , 
+      px:theme.spacing(1) ,  
+      pt:theme.spacing(2),
       
     } , 
      
@@ -265,24 +266,24 @@ import { theme } from "../Theme";
       flexDirection:'column' ,  
       alignItems:'center' , 
       justifyContent:'center' , 
-      mb:'30px'
+      mb:theme.spacing(3) , 
     }, 
 
     sectionFourIcon:{
-      fontSize:'95px' , 
-      fontWeight:'200' ,  
+      fontSize:theme.spacing(9) , 
+      fontWeight:200 ,  
       color:'#787774', 
-      pb:'30px'
+      pb:theme.spacing(3),
     } , 
 
     sectionFourTextBox:{
-       pb:'50px' , 
+       pb:theme.spacing(5), 
       '&.MuiTypography-h4':{
         textTransform:'uppercase' , 
-        color:'#2f2d29'  , 
-        px:'30px' , 
-        pt:'20px' , 
-        pb:'20px'
+        color:theme.palette.text.main  , 
+        px:theme.spacing(3) , 
+        pt:theme.spacing(2) , 
+        pb:theme.spacing(2) , 
       }
     }, 
     sectionFourInfoBox:{
@@ -292,22 +293,41 @@ import { theme } from "../Theme";
       justifyContent:'center' , 
      '&.MuiTypography-h5':{
        textTransform:'capitalize' , 
-       color:'#2f2d29' , 
-      
-       px:'30px' , 
+       color:theme.palette.text.main ,
+       px:theme.spacing(3) , 
        py:'5px',
       },
      '&.MuiTypography-h6':{
       textTransform:'capitalize' , 
-      color:'#2f2d29' , 
-      
-      px:'30px' , 
+      color:theme.palette.text.main , 
+      px:theme.spacing(3), 
       py:'5px' , 
       mx:'auto'
       } , 
 
     },
-
+    buttonStyles:{
+      maxWidth:theme.spacing(80),
+      maxHeight:theme.spacing(49),
+    } , 
+    cardStyles:{
+      bgcolor:'yellow',
+      maxWidth:theme.spacing(31),  
+      mx:'auto' 
+    }, 
+    mediaboxS:{
+      bgcolor:'transparent',  
+      position:'absolute' ,  
+      bottom:'0', 
+      right:'0', 
+      zIndex:theme.spacing(10), 
+      width:'100%' , 
+      height:'50%' ,                                        
+      display:'flex' , 
+      justifyContent:'center' , 
+      alignItems:'center' , 
+      my:theme.spacing(1) , 
+    } , 
    
   }
 

@@ -1,8 +1,10 @@
+import { theme } from "../../Theme";
+
 export const styles ={
     boxLg :{
         maxHeight:'auto'  ,  
-        my:'66px' ,
-        py:'50px' ,   
+        my:theme.spacing(7) ,
+        py:theme.spacing(5) ,   
         bgcolor:"white" , 
         display:'flex' , 
         flexWrap:'wrap' ,
@@ -10,7 +12,7 @@ export const styles ={
         justifyContent:'space-evenly'
     },
     imageListBox :{
-        width:'1650px', 
+        width:theme.spacing(165), 
         height:'auto'
     },
     

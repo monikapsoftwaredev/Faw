@@ -1,9 +1,11 @@
+import { theme } from "../../Theme";
+
 export const styles = {  
 
     sectionBoxLg:{
-        height:'70px' ,  
+        height:theme.spacing(7) ,  
         width:'100%'  ,   
-        bgcolor:" #dbcfc9" , 
+        bgcolor:theme.palette.primary.main, 
         display:'flex' , 
         flexDirection:'row', 
         alignItems:'center' , 
@@ -14,30 +16,43 @@ export const styles = {
         left:'0', 
       } , 
       sectionBoxMd1:{
-        maxHeight:'350px' ,  
-        maxWidth:'500px',  
+        maxHeight:theme.spacing(35) ,  
+        maxWidth:theme.spacing(50),  
         display:'flex' , 
         flexDirection:'row', 
         alignItems:'center' , 
         justifyContent:'center', 
-        pl:'210px', 
+        pl:theme.spacing(21), 
         
       } ,
 
       sectionBoxMd2:{
-        maxHeight:'150px' , 
-        maxWidth:'500px' ,    
+        maxHeight:theme.spacing(15) , 
+        maxWidth:theme.spacing(50) ,    
         display:'flex' , 
         flexDirection:'row', 
         alignItems:'baseline'
       } ,
 
       buttonIcon:{
-        borderRadius:'10', 
+        borderRadius:theme.spacing(1), 
         '&:hover':{
-          bgcolor:'#f7f4f2', 
+          bgcolor:theme.palette.third.main, 
           opacity:' 0.7'  
         }
       } ,
+      icon:{
+        fontSize:theme.spacing(3) , 
+        fontWeight:'200' ,  
+        color:'#787774' 
+      } ,
+
+      company:{
+        textTransform:'capitalize',
+        fontWeight:'400' ,
+        color:'#787774' ,
+        fontSize:' 1rem' ,  
+        lineHeight:' 1.5'
+      }
   
 }

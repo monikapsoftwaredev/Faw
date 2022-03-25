@@ -1,8 +1,11 @@
+import { theme } from "../../Theme";
+
 export const styles = {
 
     boxLg:{
         height:'100vh'  ,  
-        mt:'66px' ,py:'50px' ,   
+        mt:theme.spacing(7) ,
+        py:theme.spacing(5) ,   
         bgcolor:"#FFFFFF" , 
         display:'flex' , 
         flexWrap:'wrap' ,
@@ -11,7 +14,7 @@ export const styles = {
     } , 
 
     boxMd:{
-        width:'1650px', 
+        width:theme.spacing(165), 
         height:'100%' , 
         display:'flex' , 
         alignItems:'center',  

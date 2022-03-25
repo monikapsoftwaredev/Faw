@@ -1,16 +1,19 @@
+import { theme } from '../../Theme';
+ 
  export const styles = {
     appbar:{
-      backgroundColor:"#dbcfc9" , 
+      backgroundColor:theme.palette.primary.main , 
+      opacity:0.6 ,
       position:'fixed',
       overflow:'hidden'
       
      
     } , 
     logo:{
-      mr: 15,
-      fontSize: '30px',
-      fontWeight:'420', 
-      color: '#2f2d29' , 
+      mr:theme.spacing(1.5),
+      fontSize: theme.spacing(3),
+      fontWeight:420, 
+      color:theme.palette.text.main, 
       textTransform:'capitalize' , 
           display: {
               xs: 'none',
@@ -27,7 +30,7 @@
 
     text:{
         "&.MuiButton-text": {
-            color: "#2f2d29",
+            color:theme.palette.text.main,
             
           }
     },
@@ -43,17 +46,17 @@
     buttonMdNav:{
       my: 2, 
       mr: 2  , 
-      color: '#2f2d29', 
+      color:theme.palette.text.main, 
       display: 'block ',
       disableRipple:'true' 
   
     }, 
 
     textMdNav :{
-      fontSize: '15px' ,
+      fontSize: theme.spacing(1.5) ,
       textTransform:'capitalize' , 
-      fontWeight:'350', 
-      pl:'10px'
+      fontWeight:350, 
+      pl:theme.spacing(1)
     } , 
 
     

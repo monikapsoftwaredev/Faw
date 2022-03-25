@@ -40,8 +40,7 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
 
-  //, mt:'150px'
-  //  #eae1dc  #f6f1ef  #dbcfc9 #F4EBE6  #EBE2DD
+
 
   
   

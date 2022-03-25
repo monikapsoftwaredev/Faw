@@ -1,7 +1,7 @@
 import * as React from 'react';
 import{ Box, Container , ImageList , ImageListItem } from '@mui/material';
 import {wardrobePhotos}  from '../data/wardrobePhotos';
-import { styles } from  '../styles/wardrobe';
+import { styles } from  '../pages/styles/wardrobe';
 
 
 
