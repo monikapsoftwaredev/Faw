@@ -3,9 +3,9 @@ import { theme } from "../../Theme";
 export const styles = {
 
     boxLg:{
-        height:'100vh'  ,  
-        mt:theme.spacing(7) ,
-        py:theme.spacing(5) ,   
+        height:'auto'  ,  
+        my:"auto" ,
+        py:theme.spacing(10) ,   
         bgcolor:"#FFFFFF" , 
         display:'flex' , 
         flexWrap:'wrap' ,

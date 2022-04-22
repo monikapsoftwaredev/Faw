@@ -2,23 +2,27 @@ import { theme } from "../../Theme";
 
 export const styles ={
     boxLg :{
-        maxHeight:'100%'  ,  
+        maxHeight:'auto'  ,  
         mt:theme.spacing(7) ,
-        py:theme.spacing(5) ,   
-        bgcolor:"white" , 
+        py:theme.spacing(7) ,   
+        bgcolor:"#F3F3F3" , 
         display:'flex' , 
         flexWrap:'wrap' ,
         alignItems:'center', 
-        justifyContent:'space-evenly' 
+        justifyContent:'space-evenly' ,
+        mb:theme.spacing(20) , 
+        
+
     },
     imageListBox :{
         width:theme.spacing(165), 
         height:'auto' 
     },
     textBox :{ 
+        border:'solid 1px #b9936e' , 
         width:'auto', 
         height:'auto',
-        bgcolor:'#f4ebe6' ,  
+        bgcolor:'white' ,  
         display:'flex' ,
         alignItems:'center', 
         justifyContent:'center' , 

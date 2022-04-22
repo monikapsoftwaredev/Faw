@@ -4,27 +4,35 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
 
     palette :{
-        primary:{
-            main :'#dbcfc9'
-        },
-        secondary:{
-            main :'#ebe2dd'
+        
+        basic:{
+            main :'#ffffff'
         },
         
-        third:{
-            main :'#f7f4f2'
-        },
-        fourth:{
-            main :'#eae1dc'
+        primary:{
+            main :'#f3f3f3'
         },
          text:{
-            main :'#2f2d29'
+            main : '#212121'
         },
+        gold:{
+          main:'#b9936e'
+        }, 
+        dark:{
+         main:'#b9936e'
+       } ,
+       light:{
+         main:'#f1f1f4'
+       } 
+
     } ,
      typography:{
-        fontFamily:"Roboto" , 
+      fontFamily: [
+        'Cinzel',
+        'Raleway',
+        'Cormorant'
+      ].join(','), 
         h2:{
-            textTransform:'capitalize',
             fontSize:"1.1rem" ,
             fontWeight:300,
             
@@ -38,10 +46,7 @@ export const theme = createTheme({
             
             
         }, 
-        h6:{
-            
-            fontWeight:0,
-        },
+       
     } ,
     spacing: 10 , 
     components: {
@@ -51,7 +56,7 @@ export const theme = createTheme({
             // The props to change the default for.
             disableRipple: true, // No more ripple
             variant:'contained' , 
-            color:'primary'
+            color:'primary.main'
           },
         },
     
@@ -64,15 +69,15 @@ export const theme = createTheme({
               // Some CSS
               fontSize: '1rem',
               borderRadius: 0 ,
-              textTransform:'toUppercase', 
-              color:'text'
+              textTransform:'none', 
+              color:'text.main'
             },
             contained:{
-              backgroundColor:'red !important',
+              backgroundColor:'primary.main !important',
               '&:hover':{
-                backgroundColor:'yellow !important' , 
-                opacity:' 0.7',
-                color:'text' 
+               // backgroundColor:'yellow !important' , 
+                opacity:' 0.9',
+                color:'' 
               }  
             }
           },

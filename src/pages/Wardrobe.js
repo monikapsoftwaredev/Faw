@@ -27,7 +27,7 @@ const Wardrobe = () => {
 return (
     <Container maxWidth='xl' sx={styles.boxLg} >
       <Box sx={ styles.boxMd }>
-                <ImageList variant="masonry" cols={3} gap={40}>
+                <ImageList variant="masonry" cols={2} gap={8}>
                   {wardrobe} 
                 </ImageList>
       </Box>

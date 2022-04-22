@@ -11,9 +11,9 @@ import{ styles} from '../pages/styles/kitchen';
   const Kitchen = () => {
 
       return (
-        <Container maxWidth='xl' sx={styles.boxLg} >
+        <Container maxWidth='false' sx={styles.boxLg} >
             <Box sx={styles.imageListBox}>
-              <ImageList variant="masonry" cols={3} gap={20}>
+              <ImageList variant="masonry" cols={2} gap={8}>
                 {photoList.map((p) => (
                   <ImageListItem key={p.img}>
                     <img
